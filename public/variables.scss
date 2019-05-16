@@ -153,7 +153,7 @@ $time-duration: 						0.25s;
 .fa-twitter,
 .fa-whatsapp,
 .fa-youtube-play {
-	@include transition-simple;
+	// @include transition-simple;
 	&:hover {color: $color-white;}
 }
 

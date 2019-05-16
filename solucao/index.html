@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="utf-8">
+<title>Teste Front-End AutoForce</title>
+
+<link rel="stylesheet" type="text/css" href="styles/css/style.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</html>
+
+<body>
+
+    <div id="fb-root"></div>
+
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3"></script>
+
+    <div id="main-background" class="py-lg-3">
+        <header class="container">
+
+            <nav class="row d-flex justify-content-between align-items-center">
+
+                <img class="col-3 col-lg-2 img-header mt-2 mt-md-0" src="images/grand-motors.png" />
+
+                <div class="col-12 col-lg-8 row" id="nav-content">
+                    <ul class="list-unstyled text-light col-8 d-flex my-auto" >
+                        <li class="text-uppercase" id="menu-veiculos-header">
+
+                            <a href="#" class="text-light">
+                                Nossos veículos <i class="fas fa-caret-down"></i>
+                            </a>
+
+                            <ul class="bt-absolute bt-ahead bt-overflow-vertical scrollbar" id="menu-veiculos">
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6>ETIOS HATCH 2017</h6>
+                                        <img src="images/veiculos/etios-hatch.png" class=" imagem-lista-veiculos" />
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6>HILUX CABINE DUPLA 2017</h6>
+                                        <img src="images/veiculos/hilux-cabine-dupla.png"
+                                            class="imagem-lista-veiculos" />
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6>COROLLA HÍBRIDO 2018</h6>
+                                        <img src="images/veiculos/corolla-hibrido.png" class=" imagem-lista-veiculos" />
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6>CAMRY SEDÃ</h6>
+                                        <img src="images/veiculos/camry-seda.png" class="imagem-lista-veiculos" />
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6>ETIOS SEDÃ 2017</h6>
+                                        <img src="images/veiculos/etios-seda.png" class="imagem-lista-veiculos" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="text-uppercase">
+                            Serviços
+                        </li>
+
+
+                        <li class="text-uppercase" id="menu-vendas-header">
+                            <a href="#" class="text-light">
+                                Vendas diretas <i class="fas fa-caret-down"></i>
+                            </a>
+
+                            <ul class="bt-absolute bt-ahead bt-overflow-vertical" id="menu-vendas">
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">
+                                            EMPRESAS
+                                        </h6>
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">
+                                            FROTISTAS
+                                        </h6>
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">GOVERNO</h6>
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">PCD</h6>
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">PRODUTOR RURAL</h6>
+                                    </a>
+                                </li>
+                                <li class="px-2">
+                                    <a href="#" class="d-flex align-items-center justify-content-between text-dark">
+                                        <h6 class="mb-0 py-2">TAXISTA</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="bt-ahead text-light py-1 px-1" id="menu-telefones-header">
+                        <i class="fas fa-phone"></i> <a class="mx-2">TELEFONES</a> <i class="fas fa-caret-down"></i>
+                        <ul class="bt-absolute bt-ahead list-unstyled my-2" id="menu-telefones">
+                            <li class="px-2">
+                                <a href="#" class="text-dark">
+                                    <div class="d-flex justify-content-between align-items-center p-3">
+                                        Toyota Nações Unidas
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+
+                                    <ul class="list-unstyled lista-telefones">
+                                        <li class="bg-danger text-light">
+                                            <div class="p-2">(11) 3500-7909 | Serviços</div>
+                                        </li>
+                                        <li class="bg-danger text-light my-1">
+                                            <div class="p-2">(84) 9-9928-9436 | Desenvolvimento</div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+
+                            <li class="px-2">
+                                <a href="#" class="text-dark">
+                                    <div class="d-flex justify-content-between align-items-center p-3">
+                                        Toyota Nações Unidas
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+
+                                    <ul class="list-unstyled lista-telefones">
+                                        <li class="bg-danger text-light">
+                                            <div class="p-2">(84) 9-9997-8288 | Bebidas </div>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <img class="col-3 col-lg-2 img-header mt-2 mt-md-0" src="images/toyota-logo.png" />
+
+            </nav>
+        </header>
+
+        <section id="showcase">
+            <div class="container">
+                    <div class="row" id="simularFinanciamento">
+                            <form class="col-12 col-md-4 text-light py-3 mb-5 bt-darkened-background-4 animated-slide-fade-in">
+                                <h4 class="text-center">SIMULAR FINANCIAMENTO</h4>
+                                <h6 class="text-center">Escolha a parcela que cabe no seu bolso</h6>
+                                <hr>
+            
+                                <div class="form-group">
+                                    <label class="font-weight-bold mb-1" for="selectVersao">Escolha uma versão</label>
+                                    <select id="selectVersao" class="text-light form-input">
+                                        <option class="text-dark">1.0</option>
+                                        <option class="text-dark">1.4</option>
+                                        <option class="text-dark">1.6</option>
+                                        <option class="text-dark">1.8</option>
+                                    </select>
+                                </div>
+                                <!-- <i class="fa fa-chevron-down text-dark"></i> -->
+                                <hr>
+                                <div class="form-group">
+                                    <input placeholder="Nome*" type="text" class="form-input">
+                                </div>
+            
+                                <div class="form-group">
+                                    <input placeholder="Email*" type="email" class="form-input">
+                                </div>
+            
+                                <div class="form-group">
+                                    <input placeholder="Telefone*" type="tel" class="form-input">
+                                </div>
+            
+            
+            
+                                <div class="form-group">
+                                    <input placeholder="Valor da entrada*" type="number" class="form-input">
+                                </div>
+            
+                                <h6 class="font-weight-bold">Número de parcelas*</h6>
+            
+                                <div class="row form-group mt-2 d-flex justify-content-around align-items-center">
+            
+                                    <span class="col d-flex justify-content-center align-items-center">
+                                        <input type="radio" name="nParcelas" value="12" class="input-radio"><span
+                                            class="radio-description">12</span>
+                                    </span>
+            
+                                    <span class="col d-flex justify-content-center align-items-center">
+                                        <input type="radio" name="nParcelas" value="24" class="input-radio">24
+                                    </span>
+            
+                                    <span class="col d-flex justify-content-center align-items-center">
+                                        <input type="radio" name="nParcelas" value="36" class="input-radio">36
+                                    </span>
+                                    <span class="col d-flex justify-content-center align-items-center">
+                                        <input type="radio" name="nParcelas" value="48" class="input-radio">48
+                                    </span>
+            
+                                </div>
+            
+            
+            
+                                <input class="input-check" type="checkbox">
+                                <small>Desejo receber ofertas exclusivas da PG Prime.</small>
+            
+            
+                                <button id="simularButton">SIMULAR
+                                    FINANCIAMENTO</button>
+            
+            
+                                <a href="#" class="text-light text-decoration-none"
+                                    style="border-bottom: 1px solid white;"><small>Política
+                                        de privacidade</small></a>
+            
+                            </form>
+            
+            
+            
+            
+            
+                            <div class="col-12 col-md-8 text-light bt-d-flex-columns justify-content-between py-md-3 mb-5"
+                                id="segunda-coluna">
+            
+                                <div class="animated-slide-fade-in" id="elemento-superior">
+                                    <h2 class="font-weight-bold">ETIOS HATCH 2017</h2>
+                                    <h4 class="font-weight-bold">X 1.3 MANUAL</h4>
+                                    <h5 class="font-weight-bold">Você tem mais para descobrir.</h5>
+            
+                                    <h5>de <s>R$ 44.120,00</s></h5>
+                                    <h4>por <strong>R$ 40.876,00</strong></h4>
+                                    <small>*Consulte as condições comerciais</small>
+                                </div>
+            
+                                <div class="animated-fade-in" id="elemento-inferior">
+            
+                                    <h6 class="text-center">Gostou? Então compartilhe</h6>
+            
+                                    <div class="d-flex justify-content-center mb-2">
+            
+                                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+                                            data-layout="button_count" data-action="like" data-size="small" data-show-faces="true"
+                                            data-share="true"></div>
+            
+                                    </div>
+            
+                                    <small class="d-block">
+                                        *Imagens meramente ilustrativas. Alguns itens apresentados poderão não estar disponíveis nas
+                                        versões.
+                                        Preços sugeridos e válidos até 31/07/2015. Os preços poderão ser modificados sem aviso
+                                        prévio.
+                                        Consulte e confirme todas as informações com um de nossos vendedores.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+    <section id="chamada">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-4 text-center">
+                    <h4>Imperdível</h4>
+                    <h3>TAXA ZERO %</h3>
+                    <h6><small>Always first off the line. Instant torque delivers full power in a
+                            heartbeat.</small>
+                    </h6>
+                </div>
+                <div class="col-4 text-center">
+                    <h4>O carro mais</h4>
+                    <h3>SEGURO</h3>
+                    <h6><small>Always first off the line. Instant torque.</small>
+                </div>
+                <div class="col-4 text-center">
+                    <h4>Bônus de até</h4>
+                    <h3>R$ 3 mil</h3>
+                    <h6><small>Always first off the line. Instant torque delivers full power in a
+                            heartbeat.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="versoes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 bt-d-flex-columns align-items-end p-3 mt-md-5">
+                    <h4 class="text-light">Versões</h4>
+                    <ul id="lista-modelos" class="list-unstyled mt-3">
+                        <li class="py-2">
+                            <button href="#" class="active" id="buttonA200">
+                                A 200
+                            </button>
+                        </li>
+                        <hr class="my-0 d-none d-lg-block">
+                        <li class="py-2">
+                            <button href="#" class="" id="buttonA250TurboSport">
+                                A 250 TURBO SPORT
+                            </button>
+                        </li>
+                        <hr class="my-0 d-none d-lg-block">
+                        <li class="py-2">
+                            <button href="#" class="" id="buttonA45MG4Matic">
+                                A 45 MG 4MATIC
+                            </button>
+                        </li>
+                        <hr class="my-0 d-none d-lg-block">
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-9 row justify-content-between pl-5" id="info-carros-container">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center p-3">
+                        <img src="images/veiculos/etios-hatch.png" class="imagem-carro">
+                    </div>
+                    <div class="col-12 col-md-6 bt-d-flex-columns bt-darkened-background-6 py-5 px-3">
+                        <h4 class="text-left text-light">Informações Gerais</h4>
+                        <div id="tabela-infos">
+                            <table class="align-self-center w-100">
+                                <tr class="bt-lightened-background-2">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        Cilindros/Válvulas por cilindro:
+                                    </td>
+                                    <td class="text-danger" id="cilindros_valvulas">
+                                        4/4
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        Diâmetro/curso (mm):
+                                    </td>
+                                    <td class="text-danger" id="diametro_curso">
+                                        87.5/8.31
+                                    </td>
+                                </tr>
+
+                                <tr class="bt-lightened-background-2">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        Cilindradas (cc):
+                                    </td>
+                                    <td class="text-danger" id="cilindradas">
+                                        1999
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        Potência máxima EEC - Cv:
+                                    </td>
+                                    <td class="text-danger" id="potencia_ecc_cv">
+                                        240
+                                    </td>
+                                </tr>
+
+                                <tr class="bt-lightened-background-2">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        em rev/min:
+                                    </td>
+                                    <td class="text-danger" id="potencia_rev_min">
+                                        5500
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        Torque máximo EEC - Nm (libra-pé):
+                                    </td>
+                                    <td class="text-danger" id="torque_maximo">
+                                        400
+                                    </td>
+                                </tr>
+
+                                <tr class="bt-lightened-background-2">
+                                    <td class="p-2 w-75 bt-lightened-text-6">
+                                        em rev/min:
+                                    </td>
+                                    <td class="text-danger" id="torque_rev_min">
+                                        4000
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-12 mt-2 mt-md-4">
+                        <h4 class="text-light">Itens de série</h4>
+                        <ul class="list-unstyled bt-overflow-horizontal" id="itens-serie-container">
+                            <li class="item-serie">Ar condicionado</li>
+                            <li class="item-serie">AirBag</li>
+                            <li class="item-serie">Desembaçador Traseiro</li>
+                            <li class="item-serie">Ar Quente</li>
+                            <li class="item-serie">Freios ABS</li>
+                            <li class="item-serie">Teto Solar</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="nossos-carros">
+        <h3>Conheça nossos carros</h3>
+        <hr>
+
+        <h1>carrossel</h1>
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/onPageLoad.js"></script>
+</body>
