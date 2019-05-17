@@ -1,10 +1,9 @@
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 /* COLOR */
-$color-primary-base: 				  #04669c;
+$color-primary-base: 				  #b71d3e;
 $color-primary-dark: 				    darken($color-primary-base, 12%);
 $color-primary-light: 			        lighten($color-primary-base, 15%);
 
-$color-secondary-base: 			        #00AB54;
+$color-secondary-base: 			        #4eac1b;
 $color-secondary-dark: 			        darken($color-secondary-base, 12%);
 $color-secondary-light: 		        lighten($color-secondary-base, 15%);
 
@@ -63,9 +62,9 @@ $color-footer-lighter: 				    lighten($color-footer-base, 45%);
 $font-family-base: 						'Open Sans', sans-serif;
 $font-family-secondary: 				'Open Sans', sans-serif;
 
-$font-size-base:                       	17px;
-$font-size-small:                     	13px;
-$font-size-wee:                      	11px;
+$font-size-base:                       	14px;
+$font-size-small:                     	12px;
+$font-size-wee:                      	10px;
 $font-size-large:                   	ceil($font-size-base * 1.25);		// 18px
 $font-size-h1:                       	floor($font-size-base * 2.6);		// 36px
 $font-size-h2:                       	floor($font-size-base * 2.15);	    // 30px
@@ -141,10 +140,6 @@ $time-duration: 						0.20s;
 /* minhas */
 $cinza-70: rgba(127, 127, 127, 0.7);
 $branco-70: rgba(255, 255, 255, 0.7);
-$main-bg-color: #c8c8c8;
-$header-submenus-item-hover-color: #c7c7c7;
-$cor-simular-button: #b71d3e;
-$cor-simular-button-border-top: #d32e51;
 
 $slide-animation-overshoot: -50px;
 $slide-animation-initial-translation: 400px;
@@ -172,6 +167,8 @@ $footer-link-default-decoration: underline;
     box-sizing: border-box;
     font-family: $font-family-base;
 }
+
+/* tamanho de fonte padrão */
 
 html, body {
     font-size: $font-size-base * 0.8;
@@ -201,11 +198,11 @@ h6 {
     font-size: $font-size-h6;
 }
 
-small {
-    font-size: $font-size-small;
-}
-
 /* utilidades */
+
+.carousel-inner .row .col-2 img.img-fluid {
+    border: 1px solid blue;
+}
 
 .bt-text-white {
     color: white !important;
@@ -305,7 +302,7 @@ small {
     width: 100%;
     height: 100%;
     content: "";
-    background-color: $main-bg-color;
+    background-color: $color-gray;
     background-image: url('../../images/main.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -359,30 +356,16 @@ header {
     .menu-header {
 
         color: white;
-        text-transform: uppercase;
 
         a {
             text-decoration: $link-default-decoration;
         }
 
-        #menu-veiculos {
-            width: 350px;
-
-            img {
-                width: 125px;
-                height: auto;
-            }
-        }
-
-        #menu-vendas {
-            max-width: 350px;
-        }
-    
+            
         .menu-list {
             position: absolute;
             z-index: 1;
             max-width: 350px;
-            max-height: 400px;
             transform: scaleY(0);
             transform-origin: top;
             transition: transform $time-duration $time-delay $default-timing-function;
@@ -398,7 +381,7 @@ header {
             li {
                 
                 transition: background-color $time-duration $time-delay $default-timing-function;
-                padding: $padding-wee $padding-small;
+                padding: $padding-small;
 
                 a {
                     text-decoration: $link-default-decoration;
@@ -415,10 +398,37 @@ header {
             }
 
             li:hover {
-                background-color: $header-submenus-item-hover-color;
+                background-color: $color-gray;
             }
 
         }
+
+        #menu-veiculos {
+            width: 265px;
+            max-height: 270px;
+
+            img {
+                width: 65px;
+                height: auto;
+            }
+
+            h6 {
+                font-size: $font-size-h6;
+                font-weight: $font-weight-extra-bold;
+                color: $color-gray-darker;
+            }
+        }
+
+        #menu-vendas {
+            width: 150px;
+            height: 190px;
+
+            h6 {
+                font-size: 12px !important;
+                font-weight: $font-weight-normal;
+            }
+        }
+
     }
     
     .menu-header:hover {
@@ -457,27 +467,86 @@ header {
 
     #menu-telefones {
 
-        width: 250px;
+        width: 260px;
 
-        li ul.lista-telefones {
-            display: none;
+        color: $color-gray-darker;
+
+        display: flex;
+        flex-direction: column;
+
+        li {
+
+            padding: 0;
+
+            button.submenu-header {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 14px;
+
+                h6, i {
+                    margin: $margin-wee;
+                    font-size: $font-size-h6;
+                    color: $text-color;
+                    font-weight: $font-weight-bold;
+                    transition: color $time-duration $time-delay $default-timing-function;
+                }
+                
+            }
+
+            button.submenu-header.clicado {
+                h6, i {
+                    color: $color-primary-base;
+                    font-weight: $font-weight-ultra-bold;
+                }
+            }
+            
+            ul {
+
+                background-color: $color-primary-base;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform $time-duration $time-delay $default-timing-function;
+            
+                li {
+                    padding: $padding-small $padding-base;
+                }
+
+                a {
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    h6 {
+                        
+                        font-size: 12px;
+                        font-weight: $font-weight-bold;
+                        color: $color-white;
+                        margin-bottom: 0;
+
+                        span {
+                            font-weight: $font-weight-light;
+                        }
+
+                    }
+                }
+            }
         }
 
-        li:active ul.lista-telefones {
-            -webkit-transform: scaleY(1);
-            -ms-transform: scaleY(1);
-            transform: scaleY(1);
-            display: block;
-        }
+        li:hover {
 
-        .lista-telefones {
-            -webkit-transform: scaleY(0);
-            -ms-transform: scaleY(0);
-            transform: scaleY(0);
-            -webkit-transform-origin: top;
-            -ms-transform-origin: top;
-            transform-origin: top;
-            transition: transform $time-duration $time-delay $default-timing-function;
+            button {
+                h6, i {
+                    color: $color-primary-base;
+                }
+            }
+
+            ul {
+                transform: scaleY(1);
+            }
         }
 
     }
@@ -571,9 +640,9 @@ header {
     margin: $margin-base 0 $margin-extra 0;
     color: white;
     font-weight: $font-weight-bold;
-    background-color: $cor-simular-button;
-    border: 2px solid $cor-simular-button;
-    border-top: 2px solid $cor-simular-button-border-top;
+    background-color: $color-primary-base;
+    border: 2px solid $color-primary-base;
+    border-top: 2px solid $color-primary-light;
     border-radius: 5px;
     outline: none;
     -webkit-box-shadow: 0px 2px 5px #111;
@@ -585,6 +654,14 @@ header {
     order: 0;
     color: white;
     margin-bottom: $margin-big;
+
+    h1 {
+        margin-bottom: $margin-tiny;
+    }
+
+    h4 {
+        margin-bottom: $margin-extra;
+    }
 
     small {
         text-align: justify;
@@ -713,7 +790,7 @@ header {
 .item-serie {
     border-radius: 15px;
     padding: $padding-tiny $padding-small;
-    background-color: #b71d3e;
+    background-color: $color-primary-base;
     display: inline-block;
     color: white;
     margin: $margin-tiny;

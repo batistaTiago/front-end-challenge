@@ -19,6 +19,16 @@
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3"></script>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/onPageLoad.js"></script>
+
     <div id="main-background">
         <header class="container">
 
@@ -31,52 +41,52 @@
                         <li class="menu-header" id="menu-veiculos-header">
 
                             <a href="#" class="bt-text-white">
-                                Nossos veículos <i class="fas fa-caret-down"></i>
+                                NOSSOS VEÍCULOS <i class="fas fa-caret-down"></i>
                             </a>
 
                             <ul class="menu-list bt-overflow-vertical" id="menu-veiculos">
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between">
                                         <h6>ETIOS HATCH 2017</h6>
-                                        <img src="images/veiculos/etios-hatch.png" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex align-items-center justify-content-between">
-                                        <h6>HILUX CABINE DUPLA 2017</h6>
-                                        <img src="images/veiculos/hilux-cabine-dupla.png" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex align-items-center justify-content-between">
-                                        <h6>COROLLA HÍBRIDO 2018</h6>
-                                        <img src="images/veiculos/corolla-hibrido.png" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex align-items-center justify-content-between">
-                                        <h6>CAMRY SEDÃ</h6>
-                                        <img src="images/veiculos/camry-seda.png" />
+                                        <img src="images/veiculos/etios-thumb.png" />
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between">
                                         <h6>ETIOS SEDÃ 2017</h6>
-                                        <img src="images/veiculos/etios-seda.png" />
+                                        <img src="images/veiculos/etios-seda-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS CROSS 2017</h6>
+                                        <img src="images/veiculos/etios-cross-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>COROLLA 2016</h6>
+                                        <img src="images/veiculos/corolla-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>HILUX CD DIESEL</h6>
+                                        <img src="images/veiculos/hilux-thumb.png" />
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
 
-                        <li class="text-uppercase">
-                            Serviços
+                        <li>
+                            SERVIÇOS
                         </li>
 
 
                         <li class="menu-header" id="menu-vendas-header">
                             <a href="#" class="bt-text-white">
-                                Vendas diretas <i class="fas fa-caret-down"></i>
+                                VENDAS DIRETAS <i class="fas fa-caret-down"></i>
                             </a>
 
                             <ul class="menu-list bt-overflow-vertical" id="menu-vendas">
@@ -130,40 +140,44 @@
 
                     <div class="menu-header" id="menu-telefones-header">
 
-                        <i class="fas fa-phone"></i> <a>TELEFONES</a> <i class="fas fa-caret-down"></i>
+                        <a><i class="fas fa-phone"></i> TELEFONES <i class="fas fa-caret-down"></i></a>
 
                         <ul class="menu-list list-unstyled" id="menu-telefones">
                             <li>
-                                <a href="#" class="text-dark">
+                                <button href="#" class="text-dark submenu-header" id="submenu-1-toggler" onclick="">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>Toyota Nações Unidas</h6>
                                         <i class="fas fa-caret-down"></i>
                                     </div>
-
-                                    <ul class="list-unstyled lista-telefones">
-                                        <li class="bg-danger bt-text-white">
-                                            <h6>(11) 3500-7909 | Serviços</h6>
-                                        </li>
-                                        <li class="bg-danger bt-text-white">
-                                            <h6>(84) 9-9928-9436 | Desenvolvimento</h6>
-                                        </li>
-                                    </ul>
-                                </a>
+                                </button>
+                                <ul class="list-unstyled lista-telefones" id="submenu-1">
+                                    <li class="bt-text-white">
+                                        <a href="#" class="p-0 m-0">
+                                            <h6>(11) 3500-7909 <span>| Serviços</span></h6>
+                                        </a>
+                                    </li>
+                                    <li class="bt-text-white">
+                                        <a href="#">
+                                            <h6>(84) 9-9928-9436 <span>| Serviços</span></h6>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li>
-                                <a href="#" class="text-dark">
+                                <button href="#" class="text-dark submenu-header" id="submenu-2-toggler" onclick="">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>Toyota Morumbi</h6>
                                         <i class="fas fa-caret-down"></i>
                                     </div>
-
-                                    <ul class="list-unstyled lista-telefones">
-                                        <li class="bg-danger bt-text-white">
-                                            <h6>(84) 9-9997-8288 | Bebidas </h6>
-                                        </li>
-                                    </ul>
-                                </a>
+                                </button>
+                                <ul class="list-unstyled lista-telefones" id="submenu-2">
+                                    <li class="bt-text-white">
+                                        <a href="#">
+                                            <h6>(84) 9-9997-8288 <span>| Serviços</span></h6>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
 
                         </ul>
@@ -182,9 +196,9 @@
                     <div id="main-anuncio" class="col-12 col-lg-8 bt-d-flex-columns justify-content-between">
 
                         <div class="animated-slide-fade-in align-self-start">
-                            <h2 class="font-weight-bold">ETIOS HATCH 2017</h2>
+                            <h1 class="font-weight-bold">ETIOS HATCH 2017</h1>
                             <h4 class="font-weight-bold">X 1.3 MANUAL</h4>
-                            <h5 class="font-weight-bold">Você tem mais para descobrir.</h5>
+                            <h5 class="font-weight-bold" >Você tem mais para descobrir.</h5>
 
                             <h5>de <s>R$ 44.120,00</s></h5>
                             <h4>por <strong>R$ 40.876,00</strong></h4>
@@ -444,8 +458,51 @@
         <h3>Conheça nossos carros</h3>
         <hr>
 
-        <h1>carrossel</h1>
+        <!-- <div class="container"> -->
+            <div id="carrossel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carrossel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carrossel" data-slide-to="1"></li>
+                    <li data-target="#carrossel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner container">
+                    <div class="carousel-item active bt-red-border">
 
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-2">
+                                <img src="./images/carrossel/ClasseA.png" class="img-fluid">
+                                <h5>Classe A</h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/carrossel/ClasseC.png" class="img-fluid">
+                                <h5>Classe C</h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/carrossel/ClasseCLA.png" class="img-fluid">
+                                <h5>Classe CLA</h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/carrossel/ClasseA.png" class="img-fluid">
+                                <h5>Classe A</h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="./images/carrossel/ClasseC.png" class="img-fluid">
+                                <h5>Classe C</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-dark" href="#carrossel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carrossel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        <!-- </div> -->
     </section>
 
     <footer>
@@ -481,16 +538,6 @@
         </div>
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="scripts/onPageLoad.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 /* COLOR */
 /* FONT */
 /* minhas */
@@ -13,39 +12,40 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* tamanho de fonte padrão */
 html, body {
-  font-size: 13.6px;
+  font-size: 11.2px;
 }
 
 h1 {
-  font-size: 44px;
-}
-
-h2 {
   font-size: 36px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 h3 {
-  font-size: 29px;
+  font-size: 24px;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h6 {
-  font-size: 15px;
-}
-
-small {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* utilidades */
+.carousel-inner .row .col-2 img.img-fluid {
+  border: 1px solid blue;
+}
+
 .bt-text-white {
   color: white !important;
 }
@@ -264,7 +264,7 @@ small {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: #c8c8c8;
+  background-color: #c6c6c6;
   background-image: url("../../images/main.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -295,26 +295,14 @@ header ul li, header nav #nav-content {
 }
 header .menu-header {
   color: white;
-  text-transform: uppercase;
 }
 header .menu-header a {
   text-decoration: none;
-}
-header .menu-header #menu-veiculos {
-  width: 350px;
-}
-header .menu-header #menu-veiculos img {
-  width: 125px;
-  height: auto;
-}
-header .menu-header #menu-vendas {
-  max-width: 350px;
 }
 header .menu-header .menu-list {
   position: absolute;
   z-index: 1;
   max-width: 350px;
-  max-height: 400px;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.2s 0.05s ease-in-out;
@@ -327,7 +315,7 @@ header .menu-header .menu-list {
 }
 header .menu-header .menu-list li {
   transition: background-color 0.2s 0.05s ease-in-out;
-  padding: 10px 15px;
+  padding: 15px;
 }
 header .menu-header .menu-list li a {
   text-decoration: none;
@@ -341,7 +329,28 @@ header .menu-header .menu-list li a img {
   margin-bottom: 10px;
 }
 header .menu-header .menu-list li:hover {
-  background-color: #c7c7c7;
+  background-color: #c6c6c6;
+}
+header .menu-header #menu-veiculos {
+  width: 265px;
+  max-height: 270px;
+}
+header .menu-header #menu-veiculos img {
+  width: 65px;
+  height: auto;
+}
+header .menu-header #menu-veiculos h6 {
+  font-size: 12px;
+  font-weight: 800;
+  color: #2a2a2a;
+}
+header .menu-header #menu-vendas {
+  width: 150px;
+  height: 190px;
+}
+header .menu-header #menu-vendas h6 {
+  font-size: 12px !important;
+  font-weight: normal;
 }
 header .menu-header:hover {
   font-weight: 900;
@@ -368,25 +377,62 @@ header #menu-telefones-header:hover a, header #menu-telefones-header:hover i {
   color: #1c1c1c;
 }
 header #menu-telefones {
-  width: 250px;
+  width: 260px;
+  color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
 }
-header #menu-telefones li ul.lista-telefones {
-  display: none;
+header #menu-telefones li {
+  padding: 0;
 }
-header #menu-telefones li:active ul.lista-telefones {
-  -webkit-transform: scaleY(1);
-  -ms-transform: scaleY(1);
-  transform: scaleY(1);
-  display: block;
+header #menu-telefones li button.submenu-header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
-header #menu-telefones .lista-telefones {
-  -webkit-transform: scaleY(0);
-  -ms-transform: scaleY(0);
+header #menu-telefones li button.submenu-header h6, header #menu-telefones li button.submenu-header i {
+  margin: 10px;
+  font-size: 12px;
+  color: #2a2a2a;
+  font-weight: 700;
+  transition: color 0.2s 0.05s ease-in-out;
+}
+header #menu-telefones li button.submenu-header.clicado h6, header #menu-telefones li button.submenu-header.clicado i {
+  color: #b71d3e;
+  font-weight: 900;
+}
+header #menu-telefones li ul {
+  background-color: #b71d3e;
   transform: scaleY(0);
-  -webkit-transform-origin: top;
-  -ms-transform-origin: top;
   transform-origin: top;
   transition: transform 0.2s 0.05s ease-in-out;
+}
+header #menu-telefones li ul li {
+  padding: 15px 20px;
+}
+header #menu-telefones li ul a {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+header #menu-telefones li ul a h6 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0;
+}
+header #menu-telefones li ul a h6 span {
+  font-weight: 300;
+}
+header #menu-telefones li:hover button h6, header #menu-telefones li:hover button i {
+  color: #b71d3e;
+}
+header #menu-telefones li:hover ul {
+  transform: scaleY(1);
 }
 
 /* showcase */
@@ -465,7 +511,7 @@ header #menu-telefones .lista-telefones {
   font-weight: 700;
   background-color: #b71d3e;
   border: 2px solid #b71d3e;
-  border-top: 2px solid #d32e51;
+  border-top: 2px solid #e14062;
   border-radius: 5px;
   outline: none;
   -webkit-box-shadow: 0px 2px 5px #111;
@@ -477,6 +523,12 @@ header #menu-telefones .lista-telefones {
   order: 0;
   color: white;
   margin-bottom: 40px;
+}
+#main-anuncio h1 {
+  margin-bottom: 5px;
+}
+#main-anuncio h4 {
+  margin-bottom: 30px;
 }
 #main-anuncio small {
   text-align: justify;
@@ -649,12 +701,12 @@ footer a:hover, footer i:hover {
 /* responsividade */
 @media (min-width: 576px) {
   html, body {
-    font-size: 15.3px;
+    font-size: 12.6px;
   }
 }
 @media (min-width: 768px) {
   html, body {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   #lista-modelos {

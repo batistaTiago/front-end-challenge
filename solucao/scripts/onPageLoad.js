@@ -1,7 +1,15 @@
-let fadeDuration = 450
+let fadeDuration = 200
+let slideDuration = fadeDuration
+let slideDelay = 50
+
+let colorPrimaryBase = '#b71d3e'
+let colorGrayDarker = '#2a2a2a'
 
 $(document).ready(
     () => {
+
+        // $('#submenu-1').slideToggle(1)
+        // $('#submenu-2').slideToggle(1)
 
         $('#selectVersao').on(
             'change',
@@ -30,7 +38,7 @@ $(document).ready(
                             }
                         }
                         else {
-                            alert('houve um erro');
+                            alert('houve um erro')
                         }
                     }
                 )
@@ -38,6 +46,14 @@ $(document).ready(
         )
     }
 )
+
+function toggleSubmenu(id) {
+    let submenu = $('#submenu-' + id)
+    submenu.slideToggle(slideDuration)
+
+    let toggler = $('#submenu-' + id + '-toggler')
+    toggler.toggleClass('clicado')
+}
 
 function dadosValidos(dados) {
     return (
