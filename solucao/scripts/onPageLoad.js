@@ -10,27 +10,6 @@ $(document).ready(
             }
         )
 
-        // $('#menu-telefones li a').on(
-        //     'click',
-        //     (e) => {
-        //         $('.lista-telefones').toggleClass('scaleY-0')
-        //         $('.lista-telefones').toggleClass('scaleY-1')
-        //         $('.lista-telefones li').toggleClass('d-none')
-        //     }
-        // )
-
-        // $(window).on(
-        //     'scroll',
-        //     () => {
-        //         if (window.scrollY > 25) {
-        //             $('header').addClass('fixed-top py-2 bg-dark')
-        //         } else {
-        //             $('header').removeClass('fixed-top py-2 bg-dark')
-        //         }
-        //     }
-        // )
-
-
         $('#versoes button').on(
             'click',
             (e) => {
