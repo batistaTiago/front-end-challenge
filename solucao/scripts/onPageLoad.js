@@ -44,6 +44,24 @@ $(document).ready(
                 )
             }
         )
+
+        $('.carousel-item .col img').hover(
+            (e) => {
+                let imagens = $('.carousel-item .col img')
+
+                imagens.each(
+                    (index) => {
+                        if (e.target != imagens[index]) {
+                            if (e.type === 'mouseenter') {
+                                imagens[index].style.opacity = 0.6;
+                            } else if (e.type === 'mouseleave') {
+                                imagens[index].style.opacity = 1;
+                            }
+                        }
+                    }
+                )
+            }
+        )
     }
 )
 
