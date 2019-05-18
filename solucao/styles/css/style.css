@@ -289,10 +289,8 @@ header nav #nav-content ul {
 header ul li, header nav #nav-content {
   font-size: 0.9em;
 }
-header .menu-header {
-  color: white;
-}
 header .menu-header a {
+  color: white;
   text-decoration: none;
 }
 header .menu-header .menu-list {
@@ -339,6 +337,9 @@ header .menu-header #menu-veiculos h6 {
   font-size: 12px;
   font-weight: 800;
   color: #2a2a2a;
+}
+header .menu-header #menu-veiculos li {
+  padding: 10px;
 }
 header .menu-header #menu-vendas {
   width: 150px;
@@ -396,18 +397,21 @@ header #menu-telefones li button.submenu-header h6, header #menu-telefones li bu
   font-weight: 700;
   transition: color 0.2s 0.05s ease-in-out;
 }
+header #menu-telefones li button.submenu-header.clicado {
+  background-color: #eaeaea;
+}
 header #menu-telefones li button.submenu-header.clicado h6, header #menu-telefones li button.submenu-header.clicado i {
   color: #b71d3e;
   font-weight: 900;
 }
 header #menu-telefones li ul {
   background-color: #b71d3e;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.2s 0.05s ease-in-out;
 }
 header #menu-telefones li ul li {
   padding: 15px 20px;
+}
+header #menu-telefones li ul li:hover {
+  background-color: #82152c;
 }
 header #menu-telefones li ul a {
   padding: 0;
@@ -423,12 +427,6 @@ header #menu-telefones li ul a h6 {
 }
 header #menu-telefones li ul a h6 span {
   font-weight: 300;
-}
-header #menu-telefones li:hover button h6, header #menu-telefones li:hover button i {
-  color: #b71d3e;
-}
-header #menu-telefones li:hover ul {
-  transform: scaleY(1);
 }
 
 /* showcase */
@@ -506,12 +504,17 @@ header #menu-telefones li:hover ul {
   color: white;
   font-weight: 700;
   background-color: #b71d3e;
-  border: 2px solid #b71d3e;
-  border-top: 2px solid #e14062;
+  border: 2px solid #e14062;
   border-radius: 5px;
   outline: none;
   -webkit-box-shadow: 0px 2px 5px #111;
-  box-shadow: 0px 2px 5px #111;
+  box-shadow: 0px 5px 5px #111;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+#simular-button:hover {
+  background-color: #82152c;
+  border-color: #b71d3e;
 }
 
 /* coluna direita */
@@ -566,7 +569,7 @@ header #menu-telefones li:hover ul {
   padding: 25px 0;
 }
 #chamada h3 {
-  color: #d33c5c;
+  color: #e14062;
 }
 #chamada h4 {
   color: white;
@@ -578,6 +581,7 @@ header #menu-telefones li:hover ul {
 /* versoes */
 #versoes {
   position: relative;
+  background: linear-gradient(to right, #2a2a2a, #161616, #2a2a2a);
 }
 #versoes hr {
   background-color: gray;
@@ -597,11 +601,30 @@ header #menu-telefones li:hover ul {
   transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 #versoes button:not(.active):hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: #c6c6c6;
 }
 #versoes button.active {
   color: white;
   cursor: initial;
+}
+#versoes #container-tabela {
+  padding: 40px 20px;
+  background-color: #2a2a2ab0;
+}
+#versoes #tabela-infos tr:nth-child(odd) {
+  background-color: #2a2a2a;
+}
+#versoes #tabela-infos tr:nth-child(even) {
+  background-color: transparent;
+}
+#versoes #tabela-infos .data-spec, #versoes #tabela-infos .data-value {
+  padding: 10px;
+}
+#versoes #tabela-infos .data-spec {
+  color: #797979;
+}
+#versoes #tabela-infos .data-value {
+  color: #e14062;
 }
 
 #versoes::before {
@@ -611,7 +634,7 @@ header #menu-telefones li:hover ul {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: #353535;
+  opacity: 0.35;
   background-image: url("../../images/background-versoes.jpg");
   background-size: 100% 100%;
   -webkit-filter: brightness(65%);
@@ -630,7 +653,7 @@ header #menu-telefones li:hover ul {
 }
 
 #tabela-infos {
-  margin-top: 25px;
+  margin-top: 10px;
   max-height: 300px;
   overflow-x: hidden;
   overflow-y: visible;
@@ -672,7 +695,12 @@ header #menu-telefones li:hover ul {
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: black;
+  background-color: #c6c6c6;
+  opacity: 1;
+  transition: background-color 0.2s 0.05s ease-in-out;
+}
+#nossos-carros #carrossel .carousel-indicators li:hover {
+  background-color: #e14062;
 }
 #nossos-carros #carrossel .carousel-indicators li.active {
   background-color: #b71d3e;
@@ -680,7 +708,7 @@ header #menu-telefones li:hover ul {
 #nossos-carros #carrossel .carousel-control-prev, #nossos-carros #carrossel .carousel-control-next {
   background-color: #797979;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: 35px;
   height: 35px;
   opacity: 1;

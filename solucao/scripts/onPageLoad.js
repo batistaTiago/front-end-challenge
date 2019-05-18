@@ -1,6 +1,5 @@
-let fadeDuration = 200
-let slideDuration = fadeDuration
-let slideDelay = 50
+let fadeDuration = 450
+let slideDuration = 200
 
 let colorPrimaryBase = '#b71d3e'
 let colorGrayDarker = '#2a2a2a'
@@ -8,8 +7,8 @@ let colorGrayDarker = '#2a2a2a'
 $(document).ready(
     () => {
 
-        // $('#submenu-1').slideToggle(1)
-        // $('#submenu-2').slideToggle(1)
+        $('#submenu-1').slideToggle(1)
+        $('#submenu-2').slideToggle(1)
 
         $('#selectVersao').on(
             'change',
@@ -71,6 +70,10 @@ function toggleSubmenu(id) {
 
     let toggler = $('#submenu-' + id + '-toggler')
     toggler.toggleClass('clicado')
+
+    let icon = $('#submenu-' + id + '-toggler' + ' i')
+    icon.toggleClass('fa-caret-down')
+    icon.toggleClass('fa-caret-up')
 }
 
 function dadosValidos(dados) {

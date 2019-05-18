@@ -351,9 +351,8 @@ header {
 
     .menu-header {
 
-        color: white;
-
         a {
+            color: white;
             text-decoration: $link-default-decoration;
         }
 
@@ -412,6 +411,10 @@ header {
                 font-size: $font-size-h6;
                 font-weight: $font-weight-extra-bold;
                 color: $color-gray-darker;
+            }
+
+            li {
+                padding: $padding-wee;
             }
         }
 
@@ -473,6 +476,7 @@ header {
         li {
 
             padding: 0;
+            // background-color: red;
 
             button.submenu-header {
                 padding: 0;
@@ -493,6 +497,9 @@ header {
             }
 
             button.submenu-header.clicado {
+
+                background-color: $color-gray-light;
+
                 h6, i {
                     color: $color-primary-base;
                     font-weight: $font-weight-ultra-bold;
@@ -501,13 +508,13 @@ header {
             
             ul {
 
-                background-color: $color-primary-base;
-                transform: scaleY(0);
-                transform-origin: top;
-                transition: transform $time-duration $time-delay $default-timing-function;
-            
+                background-color: $color-primary-base;            
                 li {
                     padding: $padding-small $padding-base;
+                }
+
+                li:hover {
+                    background-color: $color-primary-dark;
                 }
 
                 a {
@@ -531,20 +538,7 @@ header {
                 }
             }
         }
-
-        li:hover {
-
-            button {
-                h6, i {
-                    color: $color-primary-base;
-                }
-            }
-
-            ul {
-                transform: scaleY(1);
-            }
-        }
-
+        
     }
 }
 
@@ -636,13 +630,24 @@ header {
     margin: $margin-base 0 $margin-extra 0;
     color: white;
     font-weight: $font-weight-bold;
+
     background-color: $color-primary-base;
-    border: 2px solid $color-primary-base;
-    border-top: 2px solid $color-primary-light;
+    border: 2px solid $color-primary-light;
+    // border-top: 2px solid $color-primary-light;
+
     border-radius: 5px;
     outline: none;
     -webkit-box-shadow: 0px 2px 5px #111;
-    box-shadow: 0px 2px 5px #111;
+    box-shadow: 0px 5px 5px #111;
+    transition: 
+        background-color $time-duration $default-timing-function,
+        border $time-duration $default-timing-function;
+}
+
+#simular-button:hover {
+    background-color: $color-primary-dark;
+    border-color: $color-primary-base;
+    // border-top-color: $color-primary-base;
 }
 
 /* coluna direita */
@@ -706,7 +711,7 @@ header {
     background-color: #552f37;
     padding: $padding-middle 0;
     h3 {
-        color: #d33c5c;
+        color: $color-primary-light;
     }
     h4 {
         color: white;
@@ -721,6 +726,7 @@ header {
 #versoes {
 
     position: relative;
+    background: linear-gradient(to right, $color-background-base, $color-background-dark, $color-background-base);
 
     hr {
         background-color: gray;
@@ -745,13 +751,44 @@ header {
     }
 
     button:not(.active):hover {
-        color: $branco-70;
+        color: $color-gray;
     }
 
     button.active {
         color: white;
         cursor: initial;
     }
+
+    #container-tabela {
+        padding: $padding-big $padding-base;
+        background-color: #2a2a2ab0;
+    }
+
+    #tabela-infos {
+
+        tr:nth-child(odd) {
+            background-color: $color-gray-darker;
+            
+        }
+
+        tr:nth-child(even) {
+            background-color: transparent;
+        }
+
+        .data-spec, .data-value {
+            padding: $padding-wee;
+        }
+
+        .data-spec {
+            color: $color-gray-dark;
+        }
+    
+        .data-value {
+            color: $color-primary-light;
+        }
+    }
+
+    
 }
 
 #versoes::before {
@@ -761,7 +798,7 @@ header {
     width: 100%;
     height: 100%;
     content: "";
-    background-color: #353535;
+    opacity: 0.35;
     background-image: url('../../images/background-versoes.jpg');
     background-size: 100% 100%;
     -webkit-filter: brightness(65%);
@@ -782,7 +819,7 @@ header {
 }
 
 #tabela-infos {
-    margin-top: $margin-middle;
+    margin-top: $margin-wee;
     max-height: 300px;
     overflow-x: hidden;
     overflow-y: visible;
@@ -832,7 +869,13 @@ header {
                 border-radius: 50%;
                 width: 12px;
                 height: 12px;
-                background-color: black;
+                background-color: $color-gray;
+                opacity: 1;
+                transition: background-color $time-duration $time-delay $default-timing-function;
+            }
+
+            li:hover {
+                background-color: $color-primary-light;
             }
 
             li.active {
@@ -844,7 +887,7 @@ header {
         .carousel-control-prev, .carousel-control-next {
             background-color: $color-gray-dark;
             position: absolute;
-            top: 50%;
+            top: 35%;
             width: 35px;
             height: 35px;
             opacity: 1;
