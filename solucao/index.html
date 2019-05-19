@@ -27,14 +27,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="scripts/onPageLoad.js"></script>
+    <script src="scripts/on-page-load.js"></script>
+    <script src="scripts/header-showcase.js"></script>
+    <script src="scripts/versoes.js"></script>
+    <script src="scripts/nossos-carros.js"></script>
 
     <div id="main-background">
 
         <div class="video-wrapper">
-            <iframe src="https://player.vimeo.com/video/289956785?autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0"
+            <iframe src="https://player.vimeo.com/video/289956785?autoplay=1&loop=1&title=0&byline=0&portrait=0"
                 frameborder="0" allow="autoplay">
             </iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
 
         <header class="container">
@@ -54,7 +58,7 @@
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between">
                                         <h6>ETIOS HATCH 2017</h6>
-                                        <img src="images/veiculos/etios-thumb.png" class="img-fluid"/>
+                                        <img src="images/veiculos/etios-thumb.png" class="img-fluid" />
                                     </a>
                                 </li>
                                 <li>
@@ -151,8 +155,7 @@
 
                         <ul class="menu-list list-unstyled" id="menu-telefones">
                             <li>
-                                <button href="#" class="text-dark submenu-header" id="submenu-1-toggler"
-                                    onclick="toggleSubmenu(1)">
+                                <button href="#" class="text-dark submenu-header" id="submenu-toggler-1">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>Toyota Nações Unidas</h6>
                                         <i class="fas fa-caret-down"></i>
@@ -173,8 +176,7 @@
                             </li>
 
                             <li>
-                                <button href="#" class="text-dark submenu-header" id="submenu-2-toggler"
-                                    onclick="toggleSubmenu(2)">
+                                <button href="#" class="text-dark submenu-header" id="submenu-toggler-2">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>Toyota Morumbi</h6>
                                         <i class="fas fa-caret-down"></i>
@@ -237,8 +239,7 @@
                         </div>
                     </div>
 
-                    <form class="col-12 col-lg-4 bt-darkened-background-4 animated-slide-fade-in"
-                        id="simular-financiamento">
+                    <form class="col-12 col-lg-4 animated-slide-fade-in" id="simular-financiamento">
 
                         <h4 class="text-center">SIMULAR FINANCIAMENTO</h4>
                         <h6 class="text-center">Escolha a parcela que cabe no seu bolso</h6>
@@ -314,7 +315,6 @@
 
         </section>
     </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
 
 
     <section id="chamada">
@@ -372,7 +372,7 @@
 
                 <div class="col-12 col-lg-9 row justify-content-between pl-5" id="info-carros-container">
                     <div class="col-12 col-lg-6 d-flex justify-content-center">
-                        <img src="images/veiculos/etios-hatch.png" class="imagem-carro">
+                        <img src="images/versoes/A200.png" class="imagem-carro">
                     </div>
                     <div class="col-12 col-md-6 bt-d-flex-columns" id="container-tabela">
                         <h4 class="text-left bt-text-white">Informações Gerais</h4>

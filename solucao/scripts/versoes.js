@@ -1,38 +1,19 @@
 let fadeDuration = 450
-let slideDuration = 200
-
-let colorPrimaryBase = '#b71d3e'
-let colorGrayDarker = '#2a2a2a'
-
-let largeScreenSizeInPixels = 992
 
 $(document).ready(
     () => {
-
-
-        /* condições iniciais */
-        $('#submenu-1').slideToggle(1)
-        $('#submenu-2').slideToggle(1)
-        rescaleVideoPlayer()
-        
-
-
-        /* eventos */
-        $('#selectVersao').on(
-            'change',
-            (e) => {
-                e.target.blur()
-            }
-        )
-
         $('#versoes button').on(
             'click',
             (e) => {
+                
+                // remove o estilo do botao previamente selecionado 
+                // adiciona ao que foi clicado 
                 $('button.active').removeClass('active')
                 $('#' + e.target.id).addClass('active')
 
-                let idCarro = e.target.id.replace('button', '')
 
+                // requisita os dados ao servidor para atualizar a tabela
+                let idCarro = e.target.id.replace('button', '')
                 $.get(
                     'http://localhost:3000/carros?nome=' + idCarro,
                     (data, status) => {
@@ -51,50 +32,10 @@ $(document).ready(
                 )
             }
         )
-
-        $('.carousel-item .col img').hover(
-            (e) => {
-                let imagens = $('.carousel-item .col img')
-
-                imagens.each(
-                    (index) => {
-                        if (e.target != imagens[index]) {
-                            if (e.type === 'mouseenter') {
-                                imagens[index].style.opacity = 0.6;
-                            } else if (e.type === 'mouseleave') {
-                                imagens[index].style.opacity = 1;
-                            }
-                        }
-                    }
-                )
-            }
-        )
-
-        $(window).on('resize', rescaleVideoPlayer)
     }
 )
 
-function rescaleVideoPlayer() {
-    let wrapper = $('.video-wrapper')[0]
-    if (wrapper.offsetWidth >= largeScreenSizeInPixels) {
-        let videoPlayerHeight = (9 / 16) * wrapper.offsetWidth
-        scale = wrapper.offsetHeight / videoPlayerHeight
-        $('.video-wrapper iframe')[0].style.transform = `scaleY(${scale})`
-    }    
-}
-
-function toggleSubmenu(id) {
-    let submenu = $('#submenu-' + id)
-    submenu.slideToggle(slideDuration)
-
-    let toggler = $('#submenu-' + id + '-toggler')
-    toggler.toggleClass('clicado')
-
-    let icon = $('#submenu-' + id + '-toggler' + ' i')
-    icon.toggleClass('fa-caret-down')
-    icon.toggleClass('fa-caret-up')
-}
-
+// verifica a validade dos dados vindos da API de carros 
 function dadosValidos(dados) {
     return (
         dados.featured_image &&
@@ -110,6 +51,11 @@ function dadosValidos(dados) {
     )
 }
 
+
+
+/* as funções abaixo servem para atualizar os dados mostrados na seção 'versões' */
+
+// imagem principal da seção de versões
 function atualizarImagem(url) {
     $(".imagem-carro").fadeOut(
         fadeDuration,
@@ -120,6 +66,7 @@ function atualizarImagem(url) {
     )
 }
 
+// dados da tabela
 function preencherTabela(dados) {
     $("#container-tabela").fadeOut(
         fadeDuration,
@@ -137,6 +84,7 @@ function preencherTabela(dados) {
     )
 }
 
+// lista de itens de serie
 function atualizarItensDeSerie(dados) {
     $('#itens-serie-container').fadeOut(
         fadeDuration,

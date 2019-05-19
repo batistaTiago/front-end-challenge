@@ -2,7 +2,7 @@
     "carros": [
         {
             "nome": "A200",
-            "featured_image": "images/veiculos/etios-hatch.png",
+            "featured_image": "images/versoes/A200.png",
             "cilindros_valvulas": "4/4",
             "diametro_curso": "87.5/8.31",
             "cilindradas": 1999,
@@ -21,7 +21,7 @@
         },
         {
             "nome": "A250TurboSport",
-            "featured_image": "images/veiculos/etios-seda.png",
+            "featured_image": "images/versoes/A250TurboSport.png",
             "cilindros_valvulas": "4/4",
             "diametro_curso": "92.5/9.31",
             "cilindradas": 2199,
@@ -44,7 +44,7 @@
         },
         {
             "nome": "A45MG4Matic",
-            "featured_image": "images/veiculos/camry-seda.png",
+            "featured_image": "images/versoes/A45MG4Matic.png",
             "cilindros_valvulas": "4/4",
             "diametro_curso": "101.2/10.62",
             "cilindradas": 2999,
