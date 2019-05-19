@@ -138,6 +138,8 @@ $time-duration: 						0.20s;
 
 
 /* minhas */
+
+$preto-70: rgba(0, 0, 0, 0.7);
 $cinza-70: rgba(127, 127, 127, 0.7);
 $branco-70: rgba(255, 255, 255, 0.7);
 
@@ -244,28 +246,6 @@ h6 {
     align-items: center;
 }
 
-@for $i from 1 through 9 {
-
-    .bt-lightened-text-#{$i} {
-        color: rgba(255, 255, 255, tenth($i));
-    }
-
-    .bt-lightened-background-#{$i} {
-        background-color: rgba(255, 255, 255, tenth($i));
-    }
-
-
-
-    .bt-darkened-text-#{$i} {
-        color: rgba(0, 0, 0, tenth($i));
-    }
-
-    .bt-darkened-background-#{$i} {
-        background-color: rgba(0, 0, 0, tenth($i));
-    }
-
-}
-
 
 .bt-overflow-horizontal {
     overflow-x: visible;
@@ -281,11 +261,11 @@ h6 {
     position: absolute;
 }
 
-.bt-ahead {
-    z-index: 1;
-}
-
 /* background da area principal */
+
+.video-wrapper {
+    display: none;
+}
 
 #main-background {
     position: relative;
@@ -298,24 +278,14 @@ h6 {
     width: 100%;
     height: 100%;
     content: "";
-    background-color: $color-gray;
-    background-image: url('../../images/main.png');
+    z-index: -1;
+    background-image: url('https://i.vimeocdn.com/video/725723298_640.webp');
+    background-color: #c6c6c6;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-filter: brightness(35%);
     filter: brightness(35%);
 }
-
-// #main-background {
-//     width: 100%; 
-//     height: 100%; 
-//     position: absolute; 
-//     left: 0px; 
-//     top: 0px; 
-//     z-index: -1;
-//     background-image: url('../../images/main.png');
-//     filter: brightness(35%);
-// }
 
 /* header e menus */
 
@@ -342,8 +312,6 @@ header {
             }
         }
     }
-
-
 
     ul li, nav #nav-content {
         font-size: 0.9em;
@@ -654,7 +622,10 @@ header {
 #main-anuncio {
     order: 0;
     color: white;
+    background-color: $preto-70;
     margin-bottom: $margin-big;
+    padding-top: $padding-base;
+    padding-bottom: $padding-base;
 
     h1 {
         margin-bottom: $margin-tiny;
@@ -997,12 +968,38 @@ footer {
     }
 
     #simular-financiamento {
-        margin-top: triple($margin-big);
+        margin-top: $margin-large;
     }
 
 }
 
 @media (min-width: 992px) {
+
+    .video-wrapper {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 56.25%; /* 16:9 */
+        
+        iframe {
+    
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: brightness(35%);
+    
+        }
+    }
+
+    #main-background::before {
+        background-image: none;
+    }
 
     header {
 
@@ -1031,8 +1028,7 @@ footer {
         
     #main-anuncio {
         order: 1;
-        padding-top: $padding-base;
-        padding-bottom: $padding-base;
+        background-color: unset;
     }
 
     #simular-financiamento {

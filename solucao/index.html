@@ -30,11 +30,17 @@
     <script src="scripts/onPageLoad.js"></script>
 
     <div id="main-background">
-        <header class="container">
 
+        <div class="video-wrapper">
+            <iframe src="https://player.vimeo.com/video/289956785?autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0"
+                frameborder="0" allow="autoplay">
+            </iframe>
+        </div>
+
+        <header class="container">
             <nav class="row bt-centered-flex-container">
 
-                <img class="col-3 col-lg-2" src="images/grand-motors.png" />
+                <img class="col-3 col-lg-2 img-fluid" src="images/grand-motors.png" />
 
                 <div class="col-12 col-lg-8 row" id="nav-content">
                     <ul class="list-unstyled bt-text-white col-8 d-flex my-auto">
@@ -48,7 +54,7 @@
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between">
                                         <h6>ETIOS HATCH 2017</h6>
-                                        <img src="images/veiculos/etios-thumb.png" />
+                                        <img src="images/veiculos/etios-thumb.png" class="img-fluid"/>
                                     </a>
                                 </li>
                                 <li>
@@ -187,7 +193,7 @@
                     </div>
                 </div>
 
-                <img class="col-3 col-lg-2" src="images/toyota-logo.png" />
+                <img class="col-3 col-lg-2 img-fluid" src="images/toyota-logo.png" />
 
             </nav>
         </header>
@@ -308,6 +314,7 @@
 
         </section>
     </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
 
     <section id="chamada">
@@ -438,9 +445,9 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-12 mt-2 mt-md-4">
+                    <div class="col-12 col-md-6 col-lg-12 mt-2 mt-md-4" id="itens-serie-container">
                         <h4 class="bt-text-white">Itens de série</h4>
-                        <ul class="list-unstyled bt-overflow-horizontal" id="itens-serie-container">
+                        <ul class="list-unstyled bt-overflow-horizontal">
                             <li class="item-serie">Ar condicionado</li>
                             <li class="item-serie">AirBag</li>
                             <li class="item-serie">Desembaçador Traseiro</li>
