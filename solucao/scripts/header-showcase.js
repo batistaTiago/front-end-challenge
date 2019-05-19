@@ -1,6 +1,6 @@
 
 /* parametros */
-let slideDuration = 200
+let slideDuration = 300
 let largeScreenSizeInPixels = 992
 
 $(document).ready(
