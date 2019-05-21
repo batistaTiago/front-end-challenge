@@ -6,4 +6,4 @@ Para a total funcionalidade deve-se instalar o json-server rodando:
 Em seguida, servir o arquivo contido dentro da pasta solucao/simulacao-api, usando:
 `json-server --watch api.json`
 
-Ele é usado para consultar os dados de cada modelo de carro, na seção 'versões' e submeter o formulário de simulação de orçamento para o backend.
+Ele é usado, na seção 'versões', para consultar os dados de cada modelo de carro e submeter o formulário de simulação de orçamento para o backend.
