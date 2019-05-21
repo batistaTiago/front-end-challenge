@@ -73,23 +73,5 @@
     }
   ],
   "simulacoes": [
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 1
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 2
-    }
   ]
 }
