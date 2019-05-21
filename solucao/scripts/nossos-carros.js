@@ -1,20 +1,21 @@
 $(document).ready(
     () => {
-        // altera a transparencia das imagens do carrossel que o mouse não está em cima
-        $('.carousel-item .col img').hover(
+        // altera a transparencia das imagens do carrossel que o mouse não está em cima   
+
+        let imagens = $('.carousel-item img')
+
+        imagens.hover(
             (e) => {
-                let imagens = $('.carousel-item .col img')
-                imagens.each(
-                    (index) => {
-                        if (e.target != imagens[index]) {
-                            if (e.type === 'mouseenter') {
-                                imagens[index].style.opacity = 0.6;
-                            } else if (e.type === 'mouseleave') {
-                                imagens[index].style.opacity = 1;
-                            }
+                for (let imagem of imagens) {
+                    if (e.target != imagem) {
+                        if (e.type === 'mouseenter') {
+                            $(imagem).css({ opacity: 0.4 })
+                        } else if (e.type === 'mouseleave') {
+                            $(imagem).css({ opacity: 1 })
                         }
                     }
-                )
+                }
+
             }
         )
     }

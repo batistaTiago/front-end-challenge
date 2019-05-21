@@ -1,75 +1,140 @@
 {
-    "carros": [
-        {
-            "nome": "A200",
-            "featured_image": "images/versoes/A200.png",
-            "cilindros_valvulas": "4/4",
-            "diametro_curso": "87.5/8.31",
-            "cilindradas": 1999,
-            "potencia_ecc_cv": 240,
-            "potencia_rev_min": 5500,
-            "torque_maximo": 400,
-            "torque_rev_min": 4000,
-            "itens_de_serie": [
-                "Ar condicionado",
-                "AirBag",
-                "Desembaçador Traseiro",
-                "Ar Quente",
-                "Freios ABS",
-                "Teto Solar"
-            ]
-        },
-        {
-            "nome": "A250TurboSport",
-            "featured_image": "images/versoes/A250TurboSport.png",
-            "cilindros_valvulas": "4/4",
-            "diametro_curso": "92.5/9.31",
-            "cilindradas": 2199,
-            "potencia_ecc_cv": 290,
-            "potencia_rev_min": 6100,
-            "torque_maximo": 420,
-            "torque_rev_min": 4400,
-            "itens_de_serie": [
-                "Ar condicionado",
-                "AirBag",
-                "Desembaçador Traseiro",
-                "Ar condicionado",
-                "AirBag",
-                "Ar Quente",
-                "Freios ABS",
-                "Teto Solar",
-                "Ar condicionado",
-                "AirBag"
-            ]
-        },
-        {
-            "nome": "A45MG4Matic",
-            "featured_image": "images/versoes/A45MG4Matic.png",
-            "cilindros_valvulas": "4/4",
-            "diametro_curso": "101.2/10.62",
-            "cilindradas": 2999,
-            "potencia_ecc_cv": 310,
-            "potencia_rev_min": 6500,
-            "torque_maximo": 610,
-            "torque_rev_min": 5900,
-            "itens_de_serie": [
-                "Ar condicionado",
-                "AirBag",
-                "Desembaçador Traseiro",
-                "Ar condicionado",
-                "AirBag",
-                "Desembaçador Traseiro",
-                "Ar Quente",
-                "Freios ABS",
-                "Teto Solar",
-                "Ar condicionado",
-                "Desembaçador Traseiro",
-                "AirBag",
-                "Ar condicionado",
-                "Ar Quente",
-                "Freios ABS",
-                "Teto Solar"
-            ]
-        }
-    ]
+  "carros": [
+    {
+      "nome": "A200",
+      "featured_image": "images/versoes/A200.png",
+      "cilindros_valvulas": "4/4",
+      "diametro_curso": "87.5/8.31",
+      "cilindradas": 1999,
+      "potencia_ecc_cv": 240,
+      "potencia_rev_min": 5500,
+      "torque_maximo": 400,
+      "torque_rev_min": 4000,
+      "itens_de_serie": [
+        "Ar condicionado",
+        "AirBag",
+        "Desembaçador Traseiro",
+        "Ar Quente",
+        "Freios ABS",
+        "Teto Solar"
+      ]
+    },
+    {
+      "nome": "A250TurboSport",
+      "featured_image": "images/versoes/A250TurboSport.png",
+      "cilindros_valvulas": "4/4",
+      "diametro_curso": "92.5/9.31",
+      "cilindradas": 2199,
+      "potencia_ecc_cv": 290,
+      "potencia_rev_min": 6100,
+      "torque_maximo": 420,
+      "torque_rev_min": 4400,
+      "itens_de_serie": [
+        "Ar condicionado",
+        "AirBag",
+        "Desembaçador Traseiro",
+        "Ar condicionado",
+        "AirBag",
+        "Ar Quente",
+        "Freios ABS",
+        "Teto Solar",
+        "Ar condicionado",
+        "AirBag"
+      ]
+    },
+    {
+      "nome": "A45MG4Matic",
+      "featured_image": "images/versoes/A45MG4Matic.png",
+      "cilindros_valvulas": "4/4",
+      "diametro_curso": "101.2/10.62",
+      "cilindradas": 2999,
+      "potencia_ecc_cv": 310,
+      "potencia_rev_min": 6500,
+      "torque_maximo": 610,
+      "torque_rev_min": 5900,
+      "itens_de_serie": [
+        "Ar condicionado",
+        "AirBag",
+        "Desembaçador Traseiro",
+        "Ar condicionado",
+        "AirBag",
+        "Desembaçador Traseiro",
+        "Ar Quente",
+        "Freios ABS",
+        "Teto Solar",
+        "Ar condicionado",
+        "Desembaçador Traseiro",
+        "AirBag",
+        "Ar condicionado",
+        "Ar Quente",
+        "Freios ABS",
+        "Teto Solar"
+      ]
+    }
+  ],
+  "simulacoes": [
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "12",
+      "receberNoticias": "true",
+      "id": 1
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "36",
+      "receberNoticias": "true",
+      "id": 2
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "36",
+      "receberNoticias": "true",
+      "id": 3
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "12",
+      "receberNoticias": "true",
+      "id": 4
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "12",
+      "receberNoticias": "true",
+      "id": 5
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "12",
+      "receberNoticias": "true",
+      "id": 6
+    },
+    {
+      "versao": "1.0",
+      "nome": "tiago",
+      "email": "ekyidag@gmail.com",
+      "telefone": "84999289436",
+      "numeroParcelas": "12",
+      "receberNoticias": "true",
+      "id": 7
+    }
+  ]
 }

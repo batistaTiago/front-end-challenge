@@ -14,9 +14,27 @@
 
 /* tamanho de fonte padrão */
 html, body {
-  font-size: 11.2px;
+  font-size: 18.2px;
 }
 
+@media (min-width: 768px) {
+  html, body {
+    font-size: 28px;
+  }
+
+  header .menu-header {
+    font-size: 35px;
+  }
+}
+@media (min-width: 992px) {
+  html, body {
+    font-size: 12.6px;
+  }
+
+  header .menu-header {
+    font-size: unset;
+  }
+}
 h1 {
   font-size: 36px;
 }
@@ -51,23 +69,23 @@ h6 {
 }
 
 .bt-white-border {
-  border: 2px solid white;
+  border: 5px solid white;
 }
 
 .bt-red-border {
-  border: 2px solid red;
+  border: 5px solid red;
 }
 
 .bt-green-border {
-  border: 2px solid green;
+  border: 5px solid green;
 }
 
 .bt-blue-border {
-  border: 2px solid blue;
+  border: 5px solid blue;
 }
 
 .bt-purple-border {
-  border: 2px solid purple;
+  border: 5px solid purple;
 }
 
 .bt-d-flex-columns {
@@ -78,12 +96,6 @@ h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-.bt-centered-flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .bt-overflow-horizontal {
@@ -120,176 +132,338 @@ h6 {
   background-image: url("https://i.vimeocdn.com/video/725723298_640.webp");
   background-color: #c6c6c6;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   -webkit-filter: brightness(35%);
   filter: brightness(35%);
 }
 
+@media (min-width: 992px) {
+  .video-wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    z-index: -1;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #main-background {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #main-background::before {
+    background-image: none;
+  }
+}
 /* header e menus */
 header {
   padding-left: 5px;
   padding-right: 5px;
 }
-header nav img {
-  height: 30px;
-  width: auto;
+header .menu-header {
+  font-size: 1.7em;
+  color: white;
+  text-decoration: none;
 }
-header nav #nav-content {
+header .menu-header:hover {
+  font-weight: 800;
+  text-decoration: underline;
+}
+header .lista-headers-item {
+  padding: 0;
+}
+header .menu-list {
+  top: 45px;
+  left: 0%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+  margin: 0;
+  box-shadow: 0px 0px 15px #797979;
+}
+header .menu-list li {
+  cursor: pointer;
+  padding: 15px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+header .menu-list li a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+header .menu-list li a h6 {
+  font-weight: 800;
+  margin: 0;
+}
+header .menu-list li a img {
+  margin-bottom: 10px;
+}
+header .menu-list li:hover {
+  background-color: #c6c6c6;
+  box-shadow: 0px 0px 15px #2a2a2a;
+}
+header .menu-list:hover, header .menu-header:hover + .menu-list {
+  transform: scaleY(1);
+}
+
+#lista-headers {
+  margin: 0;
+  padding: 0 40px;
+}
+#lista-headers li {
+  text-align: center;
+}
+
+#nav-content {
   margin: 15px 0;
   order: 1;
   justify-content: space-between;
   padding: 0;
 }
-header nav #nav-content ul {
+#nav-content ul {
   justify-content: space-between;
 }
-header ul li, header nav #nav-content {
-  font-size: 0.9em;
-}
-header .menu-header a {
+
+#link-servicos {
   color: white;
   text-decoration: none;
-}
-header .menu-header .menu-list {
-  position: absolute;
-  z-index: 1;
-  max-width: 350px;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s 0.05s ease-in-out;
-  background-color: white;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin: 5px 10px 0 10px;
-}
-header .menu-header .menu-list li {
-  transition: background-color 0.3s 0.05s ease-in-out;
-  padding: 15px;
-}
-header .menu-header .menu-list li a {
-  text-decoration: none;
-  color: #1c1c1c;
-}
-header .menu-header .menu-list li a h6 {
-  font-weight: 800;
   margin: 0;
 }
-header .menu-header .menu-list li a img {
-  margin-bottom: 10px;
+
+#link-servicos:hover {
+  font-weight: 800;
+  text-decoration: underline;
 }
-header .menu-header .menu-list li:hover {
-  background-color: #c6c6c6;
+
+#menu-veiculos {
+  max-height: 350px;
 }
-header .menu-header #menu-veiculos {
-  width: 265px;
-  max-height: 270px;
-}
-header .menu-header #menu-veiculos img {
-  width: 65px;
+#menu-veiculos img {
+  width: 100px;
   height: auto;
 }
-header .menu-header #menu-veiculos h6 {
-  font-size: 12px;
+#menu-veiculos h6 {
+  font-size: 18px;
   font-weight: 800;
   color: #2a2a2a;
 }
-header .menu-header #menu-veiculos li {
-  padding: 10px;
+#menu-veiculos li {
+  padding: 0 20px;
 }
-header .menu-header #menu-vendas {
-  width: 150px;
-  height: 190px;
+
+#menu-vendas {
+  height: 450px;
 }
-header .menu-header #menu-vendas h6 {
-  font-size: 12px !important;
-  font-weight: normal;
+#menu-vendas li a {
+  padding: 20px;
 }
-header .menu-header:hover {
-  font-weight: 900;
+#menu-vendas li a h6 {
+  font-size: 1.5em;
 }
-header .menu-header:hover .menu-list {
-  -webkit-transform: scaleY(1);
-  -ms-transform: scaleY(1);
-  transform: scaleY(1);
-}
-header .menu-header:hover #menu-telefones {
-  transform: scaleY(1);
-}
-header #menu-telefones-header {
+
+#menu-telefones-header {
   border: 2px solid white;
-  padding: 5px;
+  color: white;
+  margin: 0;
+  order: 1;
+  padding: 5px 0;
+}
+#menu-telefones-header a {
   color: white;
 }
-header #menu-telefones-header a {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-header #menu-telefones-header:hover {
+
+#menu-telefones-header:hover {
   background-color: rgba(255, 255, 255, 0.45);
 }
-header #menu-telefones-header:hover a, header #menu-telefones-header:hover i {
-  color: #1c1c1c;
+#menu-telefones-header:hover a {
+  text-decoration: none;
 }
-header #menu-telefones {
-  width: 260px;
-  right: 20px;
+#menu-telefones-header:hover .menu-list {
+  transform: scaleY(1);
+}
+
+#menu-telefones {
+  top: 60px;
   color: #2a2a2a;
   display: flex;
   flex-direction: column;
   transform: scaleY(0);
 }
-header #menu-telefones li {
+#menu-telefones li {
   padding: 0;
 }
-header #menu-telefones li button.submenu-header {
-  padding: 0;
+#menu-telefones li button.submenu-header {
+  padding: 20px;
+  font-size: 2em;
   margin: 0;
   width: 100%;
   border: none;
   outline: none;
-  font-size: 14px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
 }
-header #menu-telefones li button.submenu-header h6, header #menu-telefones li button.submenu-header i {
+#menu-telefones li button.submenu-header h6, #menu-telefones li button.submenu-header i {
   margin: 10px;
-  font-size: 12px;
+  font-size: 0.8em;
   color: #2a2a2a;
   font-weight: 700;
-  transition: color 0.3s 0.05s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
-header #menu-telefones li button.submenu-header.clicado {
+#menu-telefones li button.submenu-header.clicado {
   background-color: #eaeaea;
+  box-shadow: 0px 0px 15px #2a2a2a;
 }
-header #menu-telefones li button.submenu-header.clicado h6, header #menu-telefones li button.submenu-header.clicado i {
+#menu-telefones li button.submenu-header.clicado h6, #menu-telefones li button.submenu-header.clicado i {
   color: #b71d3e;
   font-weight: 900;
 }
-header #menu-telefones li ul {
+#menu-telefones li ul {
   background-color: #b71d3e;
 }
-header #menu-telefones li ul li {
+#menu-telefones li ul li {
   padding: 15px 20px;
 }
-header #menu-telefones li ul li:hover {
+#menu-telefones li ul li:hover {
   background-color: #82152c;
 }
-header #menu-telefones li ul a {
+#menu-telefones li ul a {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
 }
-header #menu-telefones li ul a h6 {
-  font-size: 12px;
+#menu-telefones li ul a h6 {
+  font-size: 1.7em;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0;
 }
-header #menu-telefones li ul a h6 span {
+#menu-telefones li ul a h6 span {
   font-weight: 300;
 }
+#menu-telefones li:hover {
+  box-shadow: none;
+}
 
+@media (min-width: 576px) {
+  header .menu-header {
+    font-size: 1.5em;
+  }
+  header .menu-list {
+    top: 40px;
+  }
+
+  #menu-telefones {
+    top: 55px;
+  }
+}
+@media (min-width: 768px) {
+  header .menu-list {
+    top: 65px;
+  }
+
+  #menu-veiculos {
+    max-height: 600px;
+  }
+  #menu-veiculos img {
+    width: 250px;
+    height: auto;
+  }
+  #menu-veiculos h6 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2a2a2a;
+  }
+
+  #menu-telefones {
+    top: 80px;
+  }
+  #menu-telefones li button.submenu-header {
+    padding: 20px;
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  header {
+    padding-top: 15px;
+  }
+  header nav #nav-content {
+    margin: 0;
+    order: 0;
+    justify-content: space-around;
+  }
+  header nav #nav-content ul {
+    justify-content: space-around;
+  }
+  header .img-header {
+    height: auto;
+    width: auto;
+  }
+  header .menu-header {
+    font-size: 0.95em;
+  }
+  header .menu-list {
+    top: 20px;
+    width: 250px;
+  }
+
+  #menu-veiculos {
+    max-height: 265px;
+  }
+  #menu-veiculos img {
+    width: 65px;
+    height: auto;
+  }
+  #menu-veiculos h6 {
+    font-size: 12px;
+    font-weight: 800;
+    color: #2a2a2a;
+  }
+
+  #menu-vendas {
+    height: 200px;
+  }
+  #menu-vendas li a {
+    padding: 5px;
+  }
+  #menu-vendas li a h6 {
+    font-size: unset;
+  }
+
+  #menu-telefones-header {
+    order: 0;
+  }
+
+  #menu-telefones {
+    top: 30px;
+  }
+  #menu-telefones li button.submenu-header {
+    padding: 0;
+    font-size: 1.15em;
+  }
+  #menu-telefones li ul a h6 {
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 1200px) {
+  header .menu-header {
+    font-size: 0.95em;
+  }
+}
 /* showcase */
 #showcase {
   margin-top: 40px;
@@ -319,6 +493,9 @@ header #menu-telefones li ul a h6 span {
 #simular-financiamento input[type=number] {
   -moz-appearance: textfield;
 }
+#simular-financiamento .form-input, #simular-financiamento .input-radio, #simular-financiamento .input-check {
+  transition: box-shadow 0.15s ease-in-out, border-width 0.15s ease-in-out, transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
 #simular-financiamento input.form-input, #simular-financiamento select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -328,15 +505,14 @@ header #menu-telefones li ul a h6 span {
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid white;
-  transition: box-shadow 0.3s 0.05s ease-in-out;
 }
 #simular-financiamento .input-radio,
 #simular-financiamento .input-check {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   background-color: transparent;
   border: 2px solid #ccc;
   margin-right: 5px;
@@ -351,18 +527,42 @@ header #menu-telefones li ul a h6 span {
 #simular-financiamento select.form-input:active,
 #simular-financiamento .input-radio:checked,
 #simular-financiamento .input-check:checked {
+  transform: scale(1.0075);
+  border-width: 2px;
   -webkit-box-shadow: 0px 0px 15px #ddd;
   box-shadow: 0px 0px 15px #ddd;
 }
 #simular-financiamento .input-radio:checked,
 #simular-financiamento .input-check:checked {
+  transform: scale(1.25);
   background-color: white;
+}
+#simular-financiamento .input-radio + label {
+  font-size: 32px;
+}
+#simular-financiamento input.form-input.is-invalid:focus, #simular-financiamento input.form-input.is-invalid:active {
+  box-shadow: 0px 0px 15px #b71d3e;
+  border-color: #b71d3e;
+}
+#simular-financiamento .modal-feedback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 220px;
+  padding: 25px;
+}
+
+#radio-container {
+  margin-bottom: 0px;
 }
 
 #simular-button {
+  font-size: 1.7em;
+  padding: 10px 20px;
   display: block;
   width: 100%;
-  padding: 10px 35px;
   margin: 20px 0 30px 0;
   color: white;
   font-weight: 700;
@@ -396,40 +596,40 @@ header #menu-telefones li ul a h6 span {
 #main-anuncio h4 {
   margin-bottom: 30px;
 }
-#main-anuncio #preco-com-desconto {
-  font-size: 30px;
-}
 #main-anuncio small {
   text-align: justify;
 }
 
-/* animações */
-@keyframes slideToOriginAndFadeIn {
-  70% {
-    opacity: 1;
-    transform: translateX(-50px);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-.animated-slide-fade-in {
-  transform: translateX(400px);
-  opacity: 0;
-  animation: slideToOriginAndFadeIn 0.5s 0.25s ease-in-out 1 forwards;
+#preco-com-desconto {
+  font-size: 30px;
 }
 
-.animated-fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s 0.75s ease-in-out 1 forwards;
-}
+@media (min-width: 992px) {
+  #main-anuncio {
+    order: 1;
+    background-color: unset;
+  }
 
+  #simular-financiamento {
+    margin-top: 0;
+  }
+  #simular-financiamento .input-radio,
+#simular-financiamento .input-check {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+  }
+  #simular-financiamento .input-radio + label {
+    font-size: 18px;
+  }
+
+  #simular-button {
+    font-size: unset;
+    padding: 10px 35px;
+  }
+}
 /* chamada */
 #chamada {
   background-color: #552f37;
@@ -450,6 +650,10 @@ header #menu-telefones li ul a h6 span {
   position: relative;
   background: linear-gradient(to right, #2a2a2a, #161616, #2a2a2a);
 }
+#versoes h3 {
+  align-self: flex-end;
+  color: #ffffffcc;
+}
 #versoes hr {
   background-color: gray;
   width: 100%;
@@ -463,7 +667,7 @@ header #menu-telefones li ul a h6 span {
   color: rgba(127, 127, 127, 0.7);
   border: none;
   background-color: transparent;
-  font-size: 1.25em;
+  font-size: 1.3em;
   outline: none;
   transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 }
@@ -473,25 +677,6 @@ header #menu-telefones li ul a h6 span {
 #versoes button.active {
   color: white;
   cursor: initial;
-}
-#versoes #container-tabela {
-  padding: 40px 20px;
-  background-color: #2a2a2ab0;
-}
-#versoes #tabela-infos tr:nth-child(odd) {
-  background-color: #2a2a2a;
-}
-#versoes #tabela-infos tr:nth-child(even) {
-  background-color: transparent;
-}
-#versoes #tabela-infos .data-spec, #versoes #tabela-infos .data-value {
-  padding: 10px;
-}
-#versoes #tabela-infos .data-spec {
-  color: #797979;
-}
-#versoes #tabela-infos .data-value {
-  color: #e14062;
 }
 
 #versoes::before {
@@ -506,6 +691,27 @@ header #menu-telefones li ul a h6 span {
   background-size: 100% 100%;
   -webkit-filter: brightness(65%);
   filter: brightness(65%);
+}
+
+#container-tabela {
+  padding: 40px 20px;
+  background-color: #2a2a2ab0;
+}
+
+#tabela-infos tr:nth-child(odd) {
+  background-color: #79797935;
+}
+#tabela-infos tr:nth-child(even) {
+  background-color: transparent;
+}
+#tabela-infos .data-spec, #tabela-infos .data-value {
+  padding: 10px;
+}
+#tabela-infos .data-spec {
+  color: #797979;
+}
+#tabela-infos .data-value {
+  color: #e14062;
 }
 
 #lista-modelos {
@@ -538,6 +744,42 @@ header #menu-telefones li ul a h6 span {
   font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  #lista-modelos {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 992px) {
+  #lista-modelos {
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.15em;
+  }
+}
+@media (max-width: 992px) {
+  #versoes .imagem-carro {
+    max-width: 750px;
+  }
+
+  #h3-versoes {
+    font-size: 2.25em;
+    align-self: center;
+  }
+
+  #lista-modelos button:not(.active) {
+    border-bottom: 1px solid rgba(127, 127, 127, 0.7);
+  }
+  #lista-modelos button:not(.active):hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  #lista-modelos button.active {
+    border-bottom: 1px solid white;
+  }
+}
 /* nossos carros */
 #nossos-carros {
   padding: 40px 0;
@@ -551,65 +793,73 @@ header #menu-telefones li ul a h6 span {
   margin: 25px auto 40px auto;
   background-color: #c6c6c6;
 }
-#nossos-carros #carrossel a, #nossos-carros #carrossel a:hover {
+
+#carrossel a, #carrossel a:hover {
   text-decoration: none;
   color: #2a2a2a;
 }
-#nossos-carros #carrossel .carousel-indicators {
+#carrossel .carousel-indicators {
   transform: translateY(20px);
 }
-#nossos-carros #carrossel .carousel-indicators li {
+#carrossel .carousel-indicators li {
   border-radius: 50%;
   width: 12px;
   height: 12px;
   background-color: #c6c6c6;
   opacity: 1;
-  transition: background-color 0.3s 0.05s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
-#nossos-carros #carrossel .carousel-indicators li:hover {
+#carrossel .carousel-indicators li:hover {
   background-color: #e14062;
 }
-#nossos-carros #carrossel .carousel-indicators li.active {
+#carrossel .carousel-indicators li.active {
   background-color: #b71d3e;
 }
-#nossos-carros #carrossel .carousel-control-prev, #nossos-carros #carrossel .carousel-control-next {
+#carrossel .carousel-control-prev, #carrossel .carousel-control-next {
   background-color: #797979;
   position: absolute;
   top: 35%;
-  width: 35px;
-  height: 35px;
+  width: 65px;
+  height: 65px;
   opacity: 1;
   transition: background-color 0.3s ease-in-out;
   border-radius: 5px;
 }
-#nossos-carros #carrossel .carousel-control-prev {
-  transform: translate(-50%, -50%);
+#carrossel .carousel-control-prev {
+  transform: translate(-70%, -50%);
 }
-#nossos-carros #carrossel .carousel-control-next {
-  transform: translate(50%, -50%);
+#carrossel .carousel-control-next {
+  transform: translate(70%, -50%);
 }
-#nossos-carros #carrossel .carousel-control-prev:hover,
-#nossos-carros #carrossel .carousel-control-prev:hover,
-#nossos-carros #carrossel .carousel-control-next:hover,
-#nossos-carros #carrossel .carousel-control-next:hover {
+#carrossel .carousel-control-prev:hover,
+#carrossel .carousel-control-prev:hover,
+#carrossel .carousel-control-next:hover,
+#carrossel .carousel-control-next:hover {
   background-color: #242424;
 }
-#nossos-carros #carrossel .carousel-item {
+#carrossel .carousel-item {
   padding: 40px;
 }
-#nossos-carros #carrossel .carousel-item img {
-  transition: opacity 0.3s 0.05s ease-in-out;
+#carrossel .carousel-item img {
+  transition: opacity 0.3s ease-in-out;
 }
 
+@media (min-width: 992px) {
+  #carrossel .carousel-control-prev, #carrossel .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  #carrossel .carousel-control-prev {
+    transform: translate(-50%, -50%);
+  }
+  #carrossel .carousel-control-next {
+    transform: translate(50%, -50%);
+  }
+}
 /* rodapé */
 footer {
   color: #6a6a6a;
   background-color: #2a2a2a;
-}
-footer #logo-autofoce {
-  width: 70px;
-  height: auto;
-  filter: brightness(35%);
 }
 footer .container {
   padding-top: 30px;
@@ -641,87 +891,13 @@ footer a:hover, footer i:hover {
   margin-top: 30px;
 }
 
-/* responsividade */
-@media (min-width: 576px) {
-  html, body {
-    font-size: 12.6px;
-  }
+#logo-autofoce {
+  width: 70px;
+  height: auto;
+  filter: brightness(35%);
 }
-@media (min-width: 768px) {
-  html, body {
-    font-size: 14px;
-  }
 
-  #lista-modelos {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  #simular-financiamento {
-    margin-top: 35px;
-  }
-}
 @media (min-width: 992px) {
-  .video-wrapper {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    padding-top: 25px;
-    z-index: -1;
-  }
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  #main-background {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  #main-background::before {
-    background-image: none;
-  }
-
-  header {
-    padding-top: 15px;
-  }
-  header nav #nav-content {
-    margin: 0;
-    order: 0;
-    justify-content: space-around;
-  }
-  header nav #nav-content ul {
-    justify-content: space-around;
-  }
-  header .img-header {
-    height: auto;
-    width: auto;
-  }
-
-  #lista-modelos {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  #main-anuncio {
-    order: 1;
-    background-color: unset;
-  }
-
-  #simular-financiamento {
-    margin-top: 0;
-  }
-
   #area-central {
     order: 0;
     padding-top: 0;
@@ -731,19 +907,63 @@ footer a:hover, footer i:hover {
     margin-top: 20px;
   }
 }
-@media (max-width: 992px) {
-  #versoes .imagem-carro {
-    max-width: 750px;
+/* animações */
+@keyframes slideToOriginAndFadeIn {
+  70% {
+    opacity: 1;
+    transform: translateX(-50px);
   }
-  #versoes #lista-modelos button:not(.active) {
-    border-bottom: 1px solid rgba(127, 127, 127, 0.7);
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  #versoes #lista-modelos button:not(.active):hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
   }
-  #versoes #lista-modelos button.active {
-    border-bottom: 1px solid white;
+}
+@keyframes shakeAnimation {
+  0% {
+    transform: translate(0);
   }
+  17% {
+    transform: translate(30px);
+  }
+  34% {
+    transform: translate(-40px);
+  }
+  51% {
+    transform: translate(50px);
+  }
+  68% {
+    transform: translate(-40px);
+  }
+  80% {
+    transform: translate(30px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.animated-slide-fade-in {
+  transform: translateX(400px);
+  opacity: 0;
+  animation: slideToOriginAndFadeIn 0.5s 0.25s ease-in-out 1 forwards;
+}
+
+.delayed-animated-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s 0.75s ease-in-out 1 forwards;
+}
+
+.animated-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 1 forwards;
+}
+
+.shake-animation {
+  animation: shakeAnimation 0.5s 0.25s ease-in-out 1;
 }
 
 /*# sourceMappingURL=style.css.map */

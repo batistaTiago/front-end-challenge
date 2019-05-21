@@ -1,6 +1,6 @@
 $(document).ready(
     () => {
-         
+
         /* condições iniciais */
         $('#submenu-1').slideToggle(1)
         $('#submenu-2').slideToggle(1)

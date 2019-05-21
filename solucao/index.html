@@ -29,6 +29,7 @@
         crossorigin="anonymous"></script>
     <script src="scripts/on-page-load.js"></script>
     <script src="scripts/header-showcase.js"></script>
+    <script src="scripts/form-validation.js"></script>
     <script src="scripts/versoes.js"></script>
     <script src="scripts/nossos-carros.js"></script>
 
@@ -42,19 +43,81 @@
         </div>
 
         <header class="container">
-            <nav class="row bt-centered-flex-container">
+            <nav class="row justify-content-between align-items-center -bg-info">
 
-                <img class="col-3 col-lg-2 img-fluid" src="images/grand-motors.png" />
+                <img class="col-6 col-md-5 col-lg-2 img-fluid" src="images/grand-motors.png" />
 
-                <div class="col-12 col-lg-8 row" id="nav-content">
-                    <ul class="list-unstyled bt-text-white col-8 d-flex my-auto">
-                        <li class="menu-header" id="menu-veiculos-header">
+                <div class="col-12 col-lg-8 -bg-dark" id="nav-content">
 
-                            <a href="#" class="bt-text-white">
+                    <ul class="list-unstyled bt-text-white col-12 -bg-warning row align-items-center"
+                        id="lista-headers">
+                        <li class="col-12 col-lg p-1 lista-headers-item -bg-danger">
+
+                            <a href="#" class="menu-header bt-text-white">
                                 NOSSOS VEÍCULOS <i class="fas fa-caret-down"></i>
                             </a>
 
-                            <ul class="menu-list bt-overflow-vertical" id="menu-veiculos">
+                            <ul class="menu-list list-unstyled bt-overflow-vertical" id="menu-veiculos">
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS HATCH 2017</h6>
+                                        <img src="images/veiculos/etios-thumb.png" class="img-fluid" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS SEDÃ 2017</h6>
+                                        <img src="images/veiculos/etios-seda-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS CROSS 2017</h6>
+                                        <img src="images/veiculos/etios-cross-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>COROLLA 2016</h6>
+                                        <img src="images/veiculos/corolla-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>HILUX CD DIESEL</h6>
+                                        <img src="images/veiculos/hilux-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS HATCH 2017</h6>
+                                        <img src="images/veiculos/etios-thumb.png" class="img-fluid" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS SEDÃ 2017</h6>
+                                        <img src="images/veiculos/etios-seda-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>ETIOS CROSS 2017</h6>
+                                        <img src="images/veiculos/etios-cross-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>COROLLA 2016</h6>
+                                        <img src="images/veiculos/corolla-thumb.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        <h6>HILUX CD DIESEL</h6>
+                                        <img src="images/veiculos/hilux-thumb.png" />
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between">
                                         <h6>ETIOS HATCH 2017</h6>
@@ -86,20 +149,23 @@
                                     </a>
                                 </li>
                             </ul>
+
                         </li>
 
 
-                        <li>
-                            SERVIÇOS
+                        <li class="lista-headers-item col-12 col-lg p-1 -bg-info" id="link-servicos">
+                            <a href="#" class="menu-header bt-text-white">
+                                SERVIÇOS
+                            </a>
                         </li>
 
 
-                        <li class="menu-header" id="menu-vendas-header">
-                            <a href="#" class="bt-text-white">
+                        <li class="lista-headers-item col-12 col-lg p-1 -bg-danger">
+                            <a href="#" class="menu-header bt-text-white">
                                 VENDAS DIRETAS <i class="fas fa-caret-down"></i>
                             </a>
 
-                            <ul class="menu-list bt-overflow-vertical" id="menu-vendas">
+                            <ul class="menu-list list-unstyled bt-overflow-vertical" id="menu-vendas">
                                 <li>
                                     <a href="#" class="d-flex align-items-center justify-content-between text-dark">
                                         <h6>
@@ -145,60 +211,110 @@
                             </ul>
                         </li>
 
+                        <li class="bt-d-flex-columns align-items-between mx-auto col-12 col-lg-2"
+                            id="menu-telefones-header">
 
+                            <a href="#" class="menu-header text-center">
+                                <i class="fas fa-phone"></i>
+                                TELEFONES
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+
+                            <ul class="menu-list list-unstyled" id="menu-telefones">
+                                <li>
+                                    <button href="#" class="text-dark submenu-header" id="submenu-toggler-1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6>Toyota Nações Unidas</h6>
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <ul class="list-unstyled lista-telefones" id="submenu-1">
+                                        <li class="bt-text-white">
+                                            <a href="#" class="p-0 m-0">
+                                                <h6>(11) 3500-7909 <span>| Serviços</span></h6>
+                                            </a>
+                                        </li>
+                                        <li class="bt-text-white">
+                                            <a href="#">
+                                                <h6>(84) 9-9928-9436 <span>| Serviços</span></h6>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <button href="#" class="text-dark submenu-header" id="submenu-toggler-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6>Toyota Morumbi</h6>
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </button>
+                                    <ul class="list-unstyled lista-telefones" id="submenu-2">
+                                        <li class="bt-text-white">
+                                            <a href="#">
+                                                <h6>(84) 9-9997-8288 <span>| Serviços</span></h6>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
                     </ul>
 
-                    <div class="menu-header" id="menu-telefones-header">
-
-                        <a href="#">
-                            <i class="fas fa-phone mr-1"></i> 
-                            TELEFONES 
-                            <i class="fas fa-caret-down ml-1"></i>
-                        </a>
-
-                        <ul class="menu-list list-unstyled" id="menu-telefones">
-                            <li>
-                                <button href="#" class="text-dark submenu-header" id="submenu-toggler-1">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h6>Toyota Nações Unidas</h6>
-                                        <i class="fas fa-caret-down"></i>
-                                    </div>
-                                </button>
-                                <ul class="list-unstyled lista-telefones" id="submenu-1">
-                                    <li class="bt-text-white">
-                                        <a href="#" class="p-0 m-0">
-                                            <h6>(11) 3500-7909 <span>| Serviços</span></h6>
-                                        </a>
-                                    </li>
-                                    <li class="bt-text-white">
-                                        <a href="#">
-                                            <h6>(84) 9-9928-9436 <span>| Serviços</span></h6>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <button href="#" class="text-dark submenu-header" id="submenu-toggler-2">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h6>Toyota Morumbi</h6>
-                                        <i class="fas fa-caret-down"></i>
-                                    </div>
-                                </button>
-                                <ul class="list-unstyled lista-telefones" id="submenu-2">
-                                    <li class="bt-text-white">
-                                        <a href="#">
-                                            <h6>(84) 9-9997-8288 <span>| Serviços</span></h6>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
                 </div>
 
-                <img class="col-3 col-lg-2 img-fluid" src="images/toyota-logo.png" />
+                <!-- <div class="bt-d-flex-columns align-items-between mx-auto col-12 col-lg-2"
+        id="menu-telefones-header">
+        
+        <a href="#" class="menu-header text-center">
+            <i class="fas fa-phone"></i>
+            TELEFONES
+            <i class="fas fa-caret-down"></i>
+        </a>
+        
+        <ul class="menu-list list-unstyled" id="menu-telefones">
+            <li>
+                <button href="#" class="text-dark submenu-header" id="submenu-toggler-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Toyota Nações Unidas</h6>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </button>
+                <ul class="list-unstyled lista-telefones" id="submenu-1">
+                    <li class="bt-text-white">
+                        <a href="#" class="p-0 m-0">
+                            <h6>(11) 3500-7909 <span>| Serviços</span></h6>
+                        </a>
+                    </li>
+                    <li class="bt-text-white">
+                        <a href="#">
+                            <h6>(84) 9-9928-9436 <span>| Serviços</span></h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li>
+                <button href="#" class="text-dark submenu-header" id="submenu-toggler-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Toyota Morumbi</h6>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </button>
+                <ul class="list-unstyled lista-telefones" id="submenu-2">
+                    <li class="bt-text-white">
+                        <a href="#">
+                            <h6>(84) 9-9997-8288 <span>| Serviços</span></h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+        </ul>
+    </div> -->
+
+                <img class="col-6 col-md-5 col-lg-2 img-fluid" src="images/toyota-logo.png" />
 
             </nav>
         </header>
@@ -219,7 +335,7 @@
                             <small>*Consulte as condições comerciais</small>
                         </div>
 
-                        <div class="animated-fade-in align-self-end">
+                        <div class="delayed-animated-fade-in align-self-end">
 
                             <h6 class="text-center">Gostou? Então compartilhe</h6>
 
@@ -259,60 +375,101 @@
                         </div>
                         <hr>
                         <div class="form-group">
-                            <input placeholder="Nome*" type="text" class="form-input">
+                            <input autocomplete="off" placeholder="Nome*" type="text" class="form-input"
+                                name="inputNome" id="inputNome">
+                            <small class="text-danger d-none">
+                                Este campo deve conter 3 ou mais caracteres.
+                            </small>
                         </div>
 
                         <div class="form-group">
-                            <input placeholder="Email*" type="email" class="form-input">
+                            <input autocomplete="off" placeholder="Email*" type="email" class="form-input"
+                                name="inputEmail" id="inputEmail">
+                            <small class="text-danger d-none">
+                                Endereço de email inválido.
+                            </small>
                         </div>
 
                         <div class="form-group">
-                            <input placeholder="Telefone*" type="tel" class="form-input">
+                            <input autocomplete="off" placeholder="Telefone*" type="tel" class="form-input"
+                                name="inputTelefone" id="inputTelefone">
+                            <small class="text-danger d-none">
+                                O telefone deve ter 10 ou 11 caracteres.
+                            </small>
                         </div>
 
-
-
                         <div class="form-group">
-                            <input placeholder="Valor da entrada*" type="number" class="form-input">
+                            <input autocomplete="off" placeholder="Valor da entrada*" type="number" class="form-input"
+                                name="inputValorEntrada" id="inputValorEntrada">
+                            <small class="text-danger d-none">
+                                Valor de entrada inválido.
+                            </small>
                         </div>
 
                         <h6 class="font-weight-bold">Número de parcelas*</h6>
 
-                        <div class="row form-group mt-2 d-flex justify-content-around align-items-center">
+                        <div class="row form-group mt-2 d-flex justify-content-around align-items-center"
+                            id="radio-container">
 
-                            <span class="col d-flex justify-content-center align-items-center">
-                                <input type="radio" name="nParcelas" value="12" class="input-radio"><span
-                                    class="radio-description">12</span>
+                            <span class="col">
+                                <input type="radio" name="nParcelas" value="12" class="input-radio" id="radio-value-12">
+                                <label for="radio-value-12">12</label>
                             </span>
 
-                            <span class="col d-flex justify-content-center align-items-center">
-                                <input type="radio" name="nParcelas" value="24" class="input-radio">24
+                            <span class="col">
+                                <input type="radio" name="nParcelas" value="24" class="input-radio" id="radio-value-24">
+                                <label for="radio-value-24">24</label>
                             </span>
 
-                            <span class="col d-flex justify-content-center align-items-center">
-                                <input type="radio" name="nParcelas" value="36" class="input-radio">36
+                            <span class="col">
+                                <input type="radio" name="nParcelas" value="36" class="input-radio" id="radio-value-36">
+                                <label for="radio-value-36">36</label>
                             </span>
-                            <span class="col d-flex justify-content-center align-items-center">
-                                <input type="radio" name="nParcelas" value="48" class="input-radio">48
+                            <span class="col">
+                                <input type="radio" name="nParcelas" value="48" class="input-radio" id="radio-value-48">
+                                <label for="radio-value-48">48</label>
                             </span>
+                        </div>
+                        <small class="text-danger d-none">
+                            Valor de entrada inválido.
+                        </small>
 
+                        <div class="mt-3">
+                            <input class="input-check" id="noticias-checkbox" type="checkbox" checked>
+                            <label for="noticias-checkbox">Desejo receber ofertas exclusivas da PG Prime.</label>
                         </div>
 
 
 
-                        <input class="input-check" type="checkbox">
-                        <small>Desejo receber ofertas exclusivas da PG Prime.</small>
+                        <button id="simular-button" type="submit">SIMULAR FINANCIAMENTO</button>
 
 
-                        <button id="simular-button">SIMULAR
-                            FINANCIAMENTO</button>
-
-
-                        <a href="#" class="bt-text-white text-decoration-none"
-                            style="border-bottom: 1px solid white;"><small>Política
-                                de privacidade</small></a>
+                        <a href="#" class="bt-text-white text-decoration-none" style="border-bottom: 1px solid white;">
+                            <small>
+                                Política de privacidade
+                            </small>
+                        </a>
 
                     </form>
+                </div>
+            </div>
+
+            <div class="modal modal-feedback animated-fade-in" tabindex="-1" role="dialog" id="feedback-modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -347,10 +504,10 @@
 
 
     <section id="versoes">
-        <div class="container">
+        <div class="container pt-3 pt-md-0">
             <div class="row">
                 <div class="col-12 col-lg-3 bt-d-flex-columns align-items-end mt-md-5">
-                    <h4 class="bt-text-white">Versões</h4>
+                    <h3 class="mb-0" id="h3-versoes">Versões</h3>
                     <ul id="lista-modelos" class="list-unstyled mt-3">
                         <li class="py-2">
                             <button href="#" class="active" id="buttonA200">
@@ -377,8 +534,8 @@
                     <div class="col-12 col-lg-6 d-flex justify-content-center">
                         <img src="images/versoes/A200.png" class="imagem-carro">
                     </div>
-                    <div class="col-12 col-md-6 bt-d-flex-columns" id="container-tabela">
-                        <h4 class="text-left bt-text-white">Informações Gerais</h4>
+                    <div class="col-12 col-lg-6 bt-d-flex-columns" id="container-tabela">
+                        <h3 class="text-left">Informações Gerais</h3>
                         <div id="tabela-infos">
                             <table class="align-self-center w-100">
                                 <tr>
@@ -448,7 +605,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-12 mt-2 mt-md-4" id="itens-serie-container">
+                    <div class="col-12 col-lg-12 mt-2 mt-md-4" id="itens-serie-container">
                         <h4 class="bt-text-white">Itens de série</h4>
                         <ul class="list-unstyled bt-overflow-horizontal">
                             <li class="item-serie">Ar condicionado</li>
@@ -482,31 +639,31 @@
                     <div class="carousel-item active">
 
                         <div class="row justify-content-center align-items-center">
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseCLA.png" class="img-fluid">
                                     <h5 class="text-center">Classe CLA</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
@@ -519,31 +676,31 @@
                     <div class="carousel-item">
 
                         <div class="row justify-content-center align-items-center">
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseCLA.png" class="img-fluid">
                                     <h5 class="text-center">Classe CLA</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
@@ -557,31 +714,31 @@
 
                         <div class="row justify-content-center align-items-center">
 
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseC.png" class="img-fluid">
                                     <h5 class="text-center">Classe C</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseCLA.png" class="img-fluid">
                                     <h5 class="text-center">Classe CLA</h5>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-md-4 col-lg">
                                 <a href="#">
                                     <img src="./images/carrossel/ClasseA.png" class="img-fluid">
                                     <h5 class="text-center">Classe A</h5>
@@ -608,7 +765,7 @@
             <div class="row">
 
 
-                <div class="col-6 col-lg-3 bt-centered-flex-container align-self-center">
+                <div class="col-6 col-lg-3 align-self-center">
                     <img src="images/grand-motors.png" class="img-fluid">
                 </div>
 
