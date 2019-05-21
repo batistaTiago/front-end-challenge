@@ -1,0 +1,66 @@
+@keyframes slideToOriginAndFadeIn {
+    70% {
+        opacity: 1;
+        transform: translateX($slide-animation-overshoot);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shakeAnimation {
+    0% {
+        transform: translate(0)
+    }
+    
+    17% {
+        transform: translate(30px)
+    }
+    
+    34% {
+        transform: translate(-40px)
+    }
+    
+    51% {
+        transform: translate(50px)
+    }
+    
+    68% {
+        transform: translate(-40px)
+    }
+    
+    80% {
+        transform: translate(30px)
+    }
+    
+    100% {
+        transform: translate(0)
+    }
+}
+
+.animated-slide-fade-in {
+    transform: translateX($slide-animation-initial-translation);
+    opacity: 0;
+    animation: slideToOriginAndFadeIn $animation-default-duration $slide-animation-delay $default-timing-function 1 forwards;
+}
+
+.delayed-animated-fade-in {
+    opacity: 0;
+    animation: fadeIn $animation-default-duration ($animation-default-duration + $slide-animation-delay) $default-timing-function 1 forwards;
+}
+
+.animated-fade-in {
+    opacity: 0;
+    animation: fadeIn $animation-default-duration $default-timing-function 1 forwards;
+}
+
+.shake-animation {
+    animation: shakeAnimation $animation-default-duration $slide-animation-delay $default-timing-function 1;
+}

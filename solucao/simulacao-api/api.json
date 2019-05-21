@@ -87,54 +87,9 @@
       "nome": "tiago",
       "email": "ekyidag@gmail.com",
       "telefone": "84999289436",
-      "numeroParcelas": "36",
+      "numeroParcelas": "12",
       "receberNoticias": "true",
       "id": 2
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "36",
-      "receberNoticias": "true",
-      "id": 3
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 4
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 5
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 6
-    },
-    {
-      "versao": "1.0",
-      "nome": "tiago",
-      "email": "ekyidag@gmail.com",
-      "telefone": "84999289436",
-      "numeroParcelas": "12",
-      "receberNoticias": "true",
-      "id": 7
     }
   ]
 }

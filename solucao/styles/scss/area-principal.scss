@@ -1,0 +1,57 @@
+
+.video-wrapper {
+    display: none;
+}
+
+#main-background {
+    position: relative;
+}
+
+#main-background::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    background-image: url('https://i.vimeocdn.com/video/725723298_640.webp');
+    background-color: #c6c6c6;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    -webkit-filter: brightness(35%);
+    filter: brightness(35%);
+}
+
+@media (min-width: 992px) {
+    .video-wrapper {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        z-index: -1;
+        
+        iframe {
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+    }
+    
+    #main-background {
+        background-color: $preto-70;
+    }
+    
+    #main-background::before {
+        background-image: none;
+    }
+}

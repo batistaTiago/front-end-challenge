@@ -13,21 +13,52 @@ $(document).ready(
                 let telefoneTextField = $('#inputTelefone')
                 let valorEntradaTextField = $('#inputValorEntrada')
 
+                let formValido = true
+
                 /* valida os dados submetidos */
                 if (!validateNome(nomeTextField.val())) {
                     shakeElement(nomeTextField)
-                }
-                else if (!validateEmail(emailTextField.val())) {
-                    shakeElement(emailTextField)
-                }
-                else if (!validateTelefone(telefoneTextField.val())) {
-                    shakeElement(telefoneTextField)
-                }
-                else if (!validateValorEntrada(valorEntradaTextField.val())) {
-                    shakeElement(valorEntradaTextField)
-                } else if (!validateNumeroParcelas()) {
-                    shakeElement($('#radio-container'))
+                    formValido = false
+                    return
                 } else {
+                    nomeTextField.next().addClass('d-none')
+                }
+                
+                if (!validateEmail(emailTextField.val())) {
+                    shakeElement(emailTextField)
+                    formValido = false
+                    return
+                } else {
+                    emailTextField.next().addClass('d-none')
+                }
+
+                if (!validateTelefone(telefoneTextField.val())) {
+                    shakeElement(telefoneTextField)
+                    formValido = false
+                    return
+                } else {
+                    telefoneTextField.next().addClass('d-none')
+                }
+
+                if (!validateValorEntrada(valorEntradaTextField.val())) {
+                    shakeElement(valorEntradaTextField)
+                    formValido = false
+                    return
+                } else {
+                    valorEntradaTextField.next().addClass('d-none')
+                }
+                
+                let radioContainer = $('#radio-container')
+                if (!validateNumeroParcelas()) {
+                    shakeElement(radioContainer)
+                    formValido = false
+                    return
+                } else {
+                    radioContainer.next().addClass('d-none')
+                } 
+                
+                if (formValido) {
+                    // $('small.mt-1.text-danger').addClass('d-none')
                     /* se tudo for valido, submete o formulario via ajax */
                     submeterFormulario(
                         {
@@ -50,15 +81,6 @@ $(document).ready(
                 $(e.target).removeClass('is-invalid')
             }
         )
-
-        /* após o input perder o foco, o feedback textual referente ao input em questão é escondido */
-        // $('input.form-input').on(
-        //     'blur',
-        //     (e) => {
-        //         console.log($(e.target))
-        //         $(e.target).next().removeClass('d-none')
-        //     }
-        // )
     }
 )
 

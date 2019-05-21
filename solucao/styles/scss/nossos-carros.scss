@@ -1,0 +1,101 @@
+#nossos-carros {
+    padding: $padding-big 0;
+    
+    h3 {
+        text-align: center;
+        color: #2a2a2a;
+    }
+    
+    hr {
+        width: 100px;
+        margin: $margin-middle auto $margin-big auto;
+        background-color: $color-gray;
+    }
+    
+}
+
+#carrossel {
+    
+    a, a:hover {
+        text-decoration: $link-default-decoration;
+        color: $color-gray-darker;
+    }
+    
+    .carousel-indicators {
+        
+        transform: translateY(20px);
+        
+        li {
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: $color-gray;
+            opacity: 1;
+            transition: background-color $default-animation-parameters;
+            //will-change: background-color;
+        }
+        
+        li:hover {
+            background-color: $color-primary-light;
+        }
+        
+        li.active {
+            background-color: $color-primary-base;
+        }
+        
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        background-color: $color-gray-dark;
+        position: absolute;
+        top: 35%;
+        width: 65px;
+        height: 65px;
+        opacity: 1;
+        transition: background-color $time-duration $default-timing-function;
+        //will-change: background-color;
+        border-radius: 5px;
+    }
+    
+    .carousel-control-prev {
+        transform: translate(-70%, -50%);
+    }
+    
+    .carousel-control-next {
+        transform: translate(70%, -50%);
+    }
+    
+    .carousel-control-prev:hover, 
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover, 
+    .carousel-control-next:hover {
+        background-color: $color-gray-base;
+    }
+    
+    .carousel-item {
+        padding: $padding-big;
+        
+        img {
+            transition: opacity $default-animation-parameters;
+            //will-change: opacity;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #carrossel {
+        .carousel-control-prev, .carousel-control-next {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .carousel-control-prev {
+            transform: translate(-50%, -50%);
+        }
+        
+        .carousel-control-next {
+            transform: translate(50%, -50%);
+        }
+    }
+    
+}

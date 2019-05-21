@@ -2,20 +2,19 @@ $(document).ready(
     () => {
         // altera a transparencia das imagens do carrossel que o mouse não está em cima   
 
-        let imagens = $('.carousel-item img')
+        let itens = $('.carousel-item-body a')
 
-        imagens.hover(
+        itens.hover(
             (e) => {
-                for (let imagem of imagens) {
-                    if (e.target != imagem) {
+                for (let item of itens) {
+                    if (e.target.parentNode != item) {
                         if (e.type === 'mouseenter') {
-                            $(imagem).css({ opacity: 0.4 })
+                            $(item).children().css({ opacity: 0.4 })
                         } else if (e.type === 'mouseleave') {
-                            $(imagem).css({ opacity: 1 })
+                            $(item).children().css({ opacity: 1 })
                         }
                     }
                 }
-
             }
         )
     }

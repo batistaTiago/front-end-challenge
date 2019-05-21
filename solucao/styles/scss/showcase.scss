@@ -1,0 +1,201 @@
+#showcase {
+    margin-top: $margin-big;
+}
+
+/* coluna esquerda */
+#simular-financiamento {
+    
+    color: white;
+    background-color: $preto-70;
+    padding-top: $padding-base;
+    padding-bottom: $padding-base;
+    margin-bottom: $margin-big;
+    margin-top: triple($margin-base);
+    border-radius: $border-radius;
+    
+    input, input::placeholder {
+        color: white;
+    }
+    
+    input, select {
+        outline: none;
+    }
+    
+    input[type="number"]::-webkit-outer-spin-button, 
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .form-input, .input-radio, .input-check {
+        $default-animation-parameters: half($time-duration) $default-timing-function;
+        transition: 
+            box-shadow $default-animation-parameters,
+            border-width $default-animation-parameters,
+            transform $default-animation-parameters,
+            background-color $default-animation-parameters;
+        //will-change: box-shadow, border-width, transform, background-color;
+    }
+    
+    input.form-input, select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        padding: $padding-wee;
+        background-color: transparent;
+        border-radius: $border-radius;
+        border: 1px solid white;
+
+    }
+    
+    .input-radio, 
+    .input-check {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        background-color: transparent;
+        border: $default-border #ccc;
+        margin-right: $margin-tiny;
+    }
+    
+    .input-radio {
+        border-radius: 50%;
+    }
+    
+    
+    input.form-input:focus, 
+    input.form-input:active,
+    input.form-input:invalid, 
+    select.form-input:focus,
+    select.form-input:active,
+    .input-radio:checked, 
+    .input-check:checked {
+        transform: scale(1.025);
+        border-width: 2px;
+        -webkit-box-shadow: $default-shadow-parameters #ddd;
+        box-shadow: $default-shadow-parameters #ddd;
+    }    
+    
+    .input-radio:checked, 
+    .input-check:checked {
+        transform: scale(1.25);
+        background-color: white;
+    }
+
+    .input-radio + label {
+        font-size: 32px;
+    }
+
+    input.form-input.is-invalid:focus {
+        // box-shadow: $default-shadow-parameters $color-primary-base;
+        border-color: $color-primary-base;
+    }
+    
+    .modal-feedback {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 220px;
+        padding: 25px;
+    }
+    
+}
+
+#radio-container {
+    margin-bottom: 0px;
+}
+
+#simular-button {
+    font-size: 1.7em;
+    padding: $padding-wee $padding-base;
+    display: block;
+    width: 100%;
+    margin: $margin-base 0 $margin-extra 0;
+    color: white;
+    font-weight: $font-weight-bold;
+    
+    background-color: $color-primary-base;
+    border: $default-border $color-primary-light;
+    // border-top: $default-border $color-primary-light;
+    
+    border-radius: 5px;
+    outline: none;
+    -webkit-box-shadow: 0px 2px 5px #111;
+    box-shadow: 0px 5px 5px #111;
+    transition: 
+    background-color $time-duration $default-timing-function,
+    border $time-duration $default-timing-function;
+    //will-change: background-color, border;
+}
+
+#simular-button:hover {
+    background-color: $color-primary-dark;
+    border-color: $color-primary-base;
+    // border-top-color: $color-primary-base;
+}
+
+/* coluna direita */
+#main-anuncio {
+    order: 0;
+    border-radius: $border-radius;
+    color: white;
+    background-color: $preto-70;
+    margin-bottom: $margin-big;
+    padding-top: $padding-base;
+    padding-bottom: $padding-base;
+    
+    h1 {
+        margin-bottom: $margin-tiny;
+    }
+    
+    h4 {
+        margin-bottom: $margin-extra;
+    }
+    
+    small {
+        text-align: justify;
+    }
+}
+
+#preco-com-desconto {
+    font-size: $font-size-h2;
+}
+
+@media (min-width: 992px) {
+    
+    #main-anuncio {
+        order: 1;
+        background-color: unset;
+    }
+    
+    #simular-financiamento {
+        margin-top: 0;
+        
+        .input-radio, 
+        .input-check {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+        }
+
+        .input-radio + label {
+            font-size: 18px;
+        }
+    }
+    
+    #simular-button {
+        font-size: unset;
+        padding: $padding-wee $padding-large;
+    }
+}
